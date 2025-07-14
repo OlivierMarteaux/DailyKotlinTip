@@ -54,8 +54,15 @@ def get_kotlin_tip() -> dict:
         "Please provide me a new Kotlin programming tip based on our whole chat thread. Format it with:\n"
         "- A title using an <h2> tag\n"
         "- Explanation in <p> tags\n"
-        "- Kotlin code inside <pre><code> tags\n"
-        "- Apply inline CSS to the <pre> tag with a background color of #feecff, padding of 12px, and rounded corners."
+        "- Kotlin code inside <pre><code> tags using an inline CSS for <pre> with:\n"
+        "  - background-color: #8a428a\n"
+        "  - white font\n"
+        "  - padding: 12px\n"
+        "  - border-radius: 8px\n"
+        "  - font-size: 13px\n"
+        "  - overflow-x: auto\n"
+        "Do not use markdown-style code fences like ```html or triple quotes.\n"
+        "Just return clean HTML only."
     )
     try:
         resp = client.chat.completions.create(

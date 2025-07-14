@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Daily Kotlin Tips</title>
+    <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
+    <description>Auto‑generated Kotlin advice</description>
+    <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Jul 2025 18:18:47 GMT</lastBuildDate>
+    <image>
+      <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
+      <title>Daily Kotlin Tips</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
+      </image>
+    <item>
+      <title>Using State Hoisting in Jetpack Compose</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714181847.html</link>
+      <description>&lt;h2&gt;Using State Hoisting in Jetpack Compose&lt;/h2&gt;
+&lt;p&gt;State hoisting is a fundamental concept in Jetpack Compose that promotes unidirectional data flow. By hoisting state up to a parent composable, you can make your UI more predictable and easier to test. This approach allows you to manage the state in a single location, and any child composable can read and update the state through callbacks, leading to cleaner and more maintainable code.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; border-radius: 8px; font-size: 13px; overflow-x: auto;"&gt;
+&lt;code&gt;import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.tooling.preview.Preview
+
+@Composable
+fun Counter() {
+    var count by remember { mutableStateOf(0) }
+
+    Column(
+        modifier = Modifier.padding(16.dp)
+    ) {
+        Text(text = "Count: $count")
+        Button(onClick = { count++ }) {
+            Text("Increment")
+        }
+    }
+}
+
+@Preview
+@Composable
+fun PreviewCounter() {
+    Counter()
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 14 Jul 2025 18:18:47 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714181847.html</guid>
+      </item>
+    <item>
+      <title>Utilizing State Hoisting in Jetpack Compose</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714181606.html</link>
+      <description>```html
+&lt;h2&gt;Utilizing State Hoisting in Jetpack Compose&lt;/h2&gt;
+&lt;p&gt;
+State hoisting is a key concept in Jetpack Compose that allows you to manage state in a more predictable way. By lifting the state up to a higher level in your composable hierarchy, you make your UI components more reusable and testable. This is especially useful when you have multiple composables that need to share the same state. Here's a simple example to illustrate how to implement state hoisting effectively.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; border-radius: 8px; font-size: 13px; overflow-x: auto;"&gt;
+&lt;code&gt;
+@Composable
+fun Counter() {
+    var count by remember { mutableStateOf(0) }
+    
+    // Hoisting the state to a higher level
+    CounterDisplay(count = count, onCountChange = { count = it })
+}
+
+@Composable
+fun CounterDisplay(count: Int, onCountChange: (Int) -&gt; Unit) {
+    Column {
+        Text(text = "Count: $count")
+        Button(onClick = { onCountChange(count + 1) }) {
+            Text("Increment")
+        }
+        Button(onClick = { onCountChange(count - 1) }) {
+            Text("Decrement")
+        }
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;
+In this example, the `Counter` composable manages the state of the count variable, while the `CounterDisplay` composable is responsible for rendering the UI. This separation of concerns allows you to reuse `CounterDisplay` in different contexts while maintaining control over its state from the parent composable.
+&lt;/p&gt;
+```</description>
+      <pubDate>Mon, 14 Jul 2025 18:16:06 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714181606.html</guid>
+      </item>
+    <item>
+      <title>Using State Hoisting in Jetpack Compose</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714181434.html</link>
+      <description>```html
+&lt;h2&gt;Using State Hoisting in Jetpack Compose&lt;/h2&gt;
+&lt;p&gt;
+State hoisting is a powerful concept in Jetpack Compose that allows you to manage the state of your composables in a more predictable and reusable way. By lifting the state up to a higher level, you can create composables that are more modular and easier to test. This approach also aligns with the unidirectional data flow recommended by Google, making your UI updates more efficient and easier to understand.
+&lt;/p&gt;
+&lt;pre&gt;&lt;code style="background-color: #8a428a; color: white; padding: 12px; border-radius: 8px; font-size: 13px; overflow-x: auto;"&gt;
+@Composable
+fun Counter() {
+    var count by remember { mutableStateOf(0) }
+    
+    Column {
+        Text(text = "Count: $count")
+        Button(onClick = { count++ }) {
+            Text("Increment")
+        }
+    }
+}
+
+@Composable
+fun ParentComposable() {
+    var count by remember { mutableStateOf(0) }
+
+    Counter(count = count, onCountChange = { count = it })
+}
+
+@Composable
+fun Counter(count: Int, onCountChange: (Int) -&gt; Unit) {
+    Column {
+        Text(text = "Count: $count")
+        Button(onClick = { onCountChange(count + 1) }) {
+            Text("Increment")
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+```
+
+In this example, the `Counter` composable is designed to be reusable by accepting `count` and `onCountChange` as parameters. This allows the parent composable to manage the state, following the best practice of state hoisting. This structure makes your composables more composable and easier to maintain.</description>
+      <pubDate>Mon, 14 Jul 2025 18:14:34 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714181434.html</guid>
+      </item>
+    <item>
+      <title>Using State in Jetpack Compose for Reactive UI</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714142804.html</link>
+      <description>&lt;h2&gt;Using State in Jetpack Compose for Reactive UI&lt;/h2&gt;
+
+&lt;p&gt;
+In Jetpack Compose, managing state is crucial for building a reactive user interface. The recommended approach is to use the &lt;code&gt;remember&lt;/code&gt; and &lt;code&gt;mutableStateOf&lt;/code&gt; functions to hold and update state variables. This allows your UI to automatically recompose when the state changes, reflecting the most up-to-date data in your composables. Here’s a simple example demonstrating how to implement a counter using state in Jetpack Compose.
+&lt;/p&gt;
+
+&lt;pre style="background-color: #feecff; padding: 12px; border-radius: 8px;"&gt;
+&lt;code&gt;
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+
+@Composable
+fun Counter() {
+    // Remember the current count state
+    val count = remember { mutableStateOf(0) }
+
+    // UI with a button to increment the count
+    Button(onClick = { count.value++ }) {
+        Text(text = "Count: ${count.value}")
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt; 
+
+&lt;p&gt;
+In this example, the &lt;code&gt;Counter&lt;/code&gt; composable maintains a state variable &lt;code&gt;count&lt;/code&gt;. Whenever the button is clicked, the count value increments, and the UI is automatically updated to reflect the new count. This pattern ensures that your UI is always in sync with the underlying data model.
+&lt;/p&gt;</description>
+      <pubDate>Mon, 14 Jul 2025 14:28:04 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714142804.html</guid>
+      </item>
+    </channel>
+  </rss>

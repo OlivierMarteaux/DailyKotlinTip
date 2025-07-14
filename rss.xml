@@ -1,52 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version='1.0' encoding='utf-8'?>
+<rss version="2.0">
   <channel>
     <title>Daily Kotlin Tips</title>
-    <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
+    <link>https://oliviermarteaux.github.io/DailyKotlinTip</link>
     <description>Auto‑generated Kotlin advice</description>
-	<atom:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self"/>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Jul 2025 14:28:04 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jul 2025 18:26:37 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tips</title>
-      <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip</link>
       </image>
     <item>
-      <title>Using State in Jetpack Compose for Reactive UI</title>
-      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714142804.html</link>
-      <description>&lt;h2&gt;Using State in Jetpack Compose for Reactive UI&lt;/h2&gt;
-
+      <title>Leveraging State in Jetpack Compose for Dynamic UI Updates</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714182637.html</link>
+      <description>&lt;h2&gt;Leveraging State in Jetpack Compose for Dynamic UI Updates&lt;/h2&gt;
 &lt;p&gt;
-In Jetpack Compose, managing state is crucial for building a reactive user interface. The recommended approach is to use the &lt;code&gt;remember&lt;/code&gt; and &lt;code&gt;mutableStateOf&lt;/code&gt; functions to hold and update state variables. This allows your UI to automatically recompose when the state changes, reflecting the most up-to-date data in your composables. Here’s a simple example demonstrating how to implement a counter using state in Jetpack Compose.
+In Jetpack Compose, managing state effectively is crucial for building responsive and dynamic UIs. By using &lt;code&gt;remember&lt;/code&gt; and &lt;code&gt;mutableStateOf&lt;/code&gt;, you can create a UI that reacts to user interactions seamlessly. This approach follows best practices recommended by Google, ensuring that your UI components are only recomposed when necessary, thus improving performance. 
 &lt;/p&gt;
-
-&lt;pre style="background-color: #feecff; padding: 12px; border-radius: 8px;"&gt;
+&lt;p&gt;
+Here’s a simple example of a counter application that demonstrates how to use state in Jetpack Compose:
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; border-radius: 8px; font-size: 13px; overflow-x: auto;"&gt;
 &lt;code&gt;
-import androidx.compose.material3.Button
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-
 @Composable
 fun Counter() {
-    // Remember the current count state
+    // Remember the count state
     val count = remember { mutableStateOf(0) }
 
-    // UI with a button to increment the count
-    Button(onClick = { count.value++ }) {
-        Text(text = "Count: ${count.value}")
+    // UI layout
+    Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+        Text(text = "Count: ${count.value}", fontSize = 24.sp)
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { count.value++ }) {
+            Text("Increment")
+        }
     }
 }
 &lt;/code&gt;
-&lt;/pre&gt; 
-
-&lt;p&gt;
-In this example, the &lt;code&gt;Counter&lt;/code&gt; composable maintains a state variable &lt;code&gt;count&lt;/code&gt;. Whenever the button is clicked, the count value increments, and the UI is automatically updated to reflect the new count. This pattern ensures that your UI is always in sync with the underlying data model.
-&lt;/p&gt;</description>
-      <pubDate>Mon, 14 Jul 2025 14:28:04 GMT</pubDate>
-      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714142804.html</guid>
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 14 Jul 2025 18:26:37 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714182637.html</guid>
       </item>
     </channel>
   </rss>
