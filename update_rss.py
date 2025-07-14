@@ -59,7 +59,7 @@ def get_kotlin_tip() -> dict:
         "  - white font\n"
         "  - padding: 12px\n"
         "  - border-radius: 8px\n"
-        "  - font-size: 13px\n"
+        "  - font-size: 10px\n"
         "  - overflow-x: auto\n"
         "Do not use markdown-style code fences like ```html or triple quotes.\n"
         "Just return clean HTML only."
