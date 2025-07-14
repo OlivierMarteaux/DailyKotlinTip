@@ -1,15 +1,16 @@
-<?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Daily Kotlin Tips</title>
-    <link>https://oliviermarteaux.github.io/DailyKotlinTip</link>
+    <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
     <description>Auto‑generated Kotlin advice</description>
+	<atom:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self"/>
     <language>en-us</language>
     <lastBuildDate>Mon, 14 Jul 2025 14:28:04 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tips</title>
-      <link>https://oliviermarteaux.github.io/DailyKotlinTip</link>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
     <item>
       <title>Using State in Jetpack Compose for Reactive UI</title>
