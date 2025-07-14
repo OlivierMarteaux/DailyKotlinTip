@@ -1,0 +1,17 @@
+name: Debug Manual Run
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show environment info
+        run: |
+          echo "Hello from GitHub Actions!"
+          echo "Running on branch $GITHUB_REF"
+          echo "Event name: $GITHUB_EVENT_NAME"
+          echo "Workflow triggered by $GITHUB_ACTOR"
+      - name: List files in repo root
+        run: ls -l

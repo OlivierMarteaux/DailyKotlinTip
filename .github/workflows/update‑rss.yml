@@ -1,0 +1,38 @@
+name: Update RSS with ChatGPT tip
+
+on:
+  schedule:
+    - cron:  '0 7 * * *'  # every day at 07:00 UTC (≈ 09:00 Paris)
+  workflow_dispatch:       # allow manual “Run workflow”
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install openai python-dateutil
+
+      - name: Generate and insert RSS item
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python update_rss.py
+
+      - name: Commit & push if changed
+        run: |
+          git config --global user.name  "rss‑bot"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [[ `git status --porcelain` ]]; then
+            git add rss.xml articles index.html
+            git commit -m "🤖 new tip $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            git push
+          else
+            echo "No changes – nothing to commit."
+          fi
