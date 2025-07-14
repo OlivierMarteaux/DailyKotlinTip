@@ -4,7 +4,7 @@
     <title>Daily Kotlin Tips</title>
     <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
     <description>Auto‑generated Kotlin advice</description>
-	<atom:link href="https://blog.google/products/android/rss/" rel="self"/>
+	<atom:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self"/>
     <language>en-us</language>
     <lastBuildDate>Mon, 14 Jul 2025 18:26:37 GMT</lastBuildDate>
     <image>
