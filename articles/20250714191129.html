@@ -1,0 +1,18 @@
+<h2>Using State in Jetpack Compose for Reactive UI</h2>
+<p>In Jetpack Compose, managing UI state efficiently is crucial for creating responsive applications. By leveraging the state management capabilities of Compose, you can ensure that your UI updates automatically when the underlying data changes. A common practice is to use <code>remember</code> and <code>mutableStateOf</code> to hold the state of your composables. This allows your UI to react to changes without the need for complex lifecycle management.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; border-radius: 8px; font-size: 10px; overflow-x: auto;">
+<code>import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.material.Text
+import androidx.compose.material.Button
+
+@Composable
+fun Counter() {
+    val count = remember { mutableStateOf(0) }
+
+    Button(onClick = { count.value++ }) {
+        Text(text = "Count: ${count.value}")
+    }
+}</code>
+</pre>
