@@ -30,6 +30,17 @@ logging.basicConfig(
 
 client = OpenAI()  # reads OPENAI_API_KEY from env automatically
 
+# Load last N titles from rss.xml
+def get_previous_titles(limit=20):
+    if not os.path.exists(RSS_PATH):
+        return []
+    tree = ET.parse(RSS_PATH)
+    return [
+        item.findtext("title")
+        for item in tree.findall("./channel/item")[:limit]
+    ]
+
+# Set line breaks when writing rss.xml
 def indent(elem, level=0):
     """Pretty-print an XML tree (ElementTree-compatible)."""
     i = "\n" + level * "  "
@@ -43,15 +54,22 @@ def indent(elem, level=0):
     else:
         if level and (not elem.tail or not elem.tail.strip()):
             elem.tail = i
-            
+
+# Get the ChatGPT answer tip
 def get_kotlin_tip() -> dict:
-    logging.info("Requesting Kotlin tip from ChatGPT...")
+    previous_titles = get_previous_titles()
+    titles_str = "\n".join(f"- {title}" for title in previous_titles if title)
+    logging.info("Already provided tips: {titles_str}.")
+    logging.info("Requesting new Kotlin tip from ChatGPT...")
     prompt = (
         "You are an experimented Android Development teacher,"
         "specialized in Kotlin language and Jetpack Compose framework."
         "You like to provide clear and concise tips to students,"
         "following Google recommended best practices and using real cases examples.\n"
-        "Please provide me a new Kotlin programming tip based on our whole chat thread. Format it with:\n"
+        "Here are the previous tips you already provided:\n"
+        "{titles_str}\n"
+        "Please now provide me a **new** Kotlin programming tip not already listed.\n"
+        "Format it with:\n"
         "- A title using an <h2> tag\n"
         "- Explanation in <p> tags\n"
         "- Kotlin code inside <pre><code> tags using an inline CSS for <pre> with:\n"
