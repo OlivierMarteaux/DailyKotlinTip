@@ -6,12 +6,52 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Jul 2025 19:11:29 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jul 2025 07:25:29 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tips</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Utilizing State Hoisting in Jetpack Compose</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250715072529.html</link>
+      <description>&lt;h2&gt;Utilizing State Hoisting in Jetpack Compose&lt;/h2&gt;
+&lt;p&gt;State hoisting is a powerful concept in Jetpack Compose that allows you to manage state in a way that keeps your composables simple and focused on displaying UI. By hoisting state, you can separate the state management from the UI logic, making your code more reusable and easier to test. This is especially useful when you have multiple composables that need to share or react to the same state.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; border-radius: 8px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+@Composable
+fun Counter() {
+    var count by remember { mutableStateOf(0) }
+
+    Column {
+        Text(text = "Count: $count")
+        Button(onClick = { count++ }) {
+            Text("Increment")
+        }
+    }
+}
+
+@Composable
+fun ParentComposable() {
+    var count by remember { mutableStateOf(0) }
+
+    Counter(count = count, onCountChange = { count = it })
+}
+
+@Composable
+fun Counter(count: Int, onCountChange: (Int) -&gt; Unit) {
+    Column {
+        Text(text = "Count: $count")
+        Button(onClick = { onCountChange(count + 1) }) {
+            Text("Increment")
+        }
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 15 Jul 2025 07:25:29 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250715072529.html</guid>
+      </item>
     <item>
       <title>Using State in Jetpack Compose for Reactive UI</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250714191129.html</link>

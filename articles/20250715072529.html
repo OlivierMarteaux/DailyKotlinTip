@@ -1,0 +1,34 @@
+<h2>Utilizing State Hoisting in Jetpack Compose</h2>
+<p>State hoisting is a powerful concept in Jetpack Compose that allows you to manage state in a way that keeps your composables simple and focused on displaying UI. By hoisting state, you can separate the state management from the UI logic, making your code more reusable and easier to test. This is especially useful when you have multiple composables that need to share or react to the same state.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; border-radius: 8px; font-size: 10px; overflow-x: auto;">
+<code>
+@Composable
+fun Counter() {
+    var count by remember { mutableStateOf(0) }
+
+    Column {
+        Text(text = "Count: $count")
+        Button(onClick = { count++ }) {
+            Text("Increment")
+        }
+    }
+}
+
+@Composable
+fun ParentComposable() {
+    var count by remember { mutableStateOf(0) }
+
+    Counter(count = count, onCountChange = { count = it })
+}
+
+@Composable
+fun Counter(count: Int, onCountChange: (Int) -> Unit) {
+    Column {
+        Text(text = "Count: $count")
+        Button(onClick = { onCountChange(count + 1) }) {
+            Text("Increment")
+        }
+    }
+}
+</code>
+</pre>
