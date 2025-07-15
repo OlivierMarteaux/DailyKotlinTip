@@ -6,12 +6,71 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Jul 2025 07:25:29 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jul 2025 13:00:52 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Extensions for Cleaner Code</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250715130052.html</link>
+      <description>&lt;h2&gt;Using Extensions for Cleaner Code&lt;/h2&gt;
+&lt;p&gt;In Kotlin, extension functions allow you to add new functionalities to existing classes without modifying their source code. This feature can significantly improve code readability and reusability in your Jetpack Compose projects. By creating extension functions for common tasks or UI components, you can simplify your code and keep your composables clean and focused.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+fun Modifier.customPadding(padding: Dp): Modifier {
+    return this.padding(padding)
+}
+
+@Composable
+fun Greeting(name: String) {
+    Text(
+        text = "Hello, $name!",
+        modifier = Modifier.customPadding(16.dp)
+    )
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 15 Jul 2025 13:00:52 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250715130052.html</guid>
+      </item>
+    <item>
+      <title>Using Sealed Classes for Better State Management</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250715125125.html</link>
+      <description>&lt;h2&gt;Using Sealed Classes for Better State Management&lt;/h2&gt;
+&lt;p&gt;Sealed classes are a powerful feature in Kotlin that allow you to represent restricted class hierarchies. This is particularly useful when managing different states in your application, such as loading, success, and error states. By using sealed classes, you can ensure that all possible states are handled, making your code safer and more maintainable.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; border-radius: 8px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+sealed class Result&lt;out T&gt; {
+    data class Success&lt;out T&gt;(val data: T) : Result&lt;T&gt;()
+    data class Error(val exception: Exception) : Result&lt;Nothing&gt;()
+    object Loading : Result&lt;Nothing&gt;()
+}
+
+fun fetchData(): Result&lt;String&gt; {
+    return try {
+        // Simulate a network call
+        Result.Loading
+        val data = "Fetched Data"
+        Result.Success(data)
+    } catch (e: Exception) {
+        Result.Error(e)
+    }
+}
+
+fun handleResult(result: Result&lt;String&gt;) {
+    when (result) {
+        is Result.Success -&gt; println("Data: ${result.data}")
+        is Result.Error -&gt; println("Error: ${result.exception.message}")
+        Result.Loading -&gt; println("Loading...")
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 15 Jul 2025 12:51:25 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250715125125.html</guid>
+      </item>
     <item>
       <title>Utilizing State Hoisting in Jetpack Compose</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250715072529.html</link>

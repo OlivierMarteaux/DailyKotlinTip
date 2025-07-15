@@ -59,29 +59,29 @@ def indent(elem, level=0):
 def get_kotlin_tip() -> dict:
     previous_titles = get_previous_titles()
     titles_str = "\n".join(f"- {title}" for title in previous_titles if title)
-    logging.info("Already provided tips: {titles_str}.")
+    logging.info(f"Already provided tips:\n{titles_str}.")
     logging.info("Requesting new Kotlin tip from ChatGPT...")
-    prompt = (
-        "You are an experimented Android Development teacher,"
-        "specialized in Kotlin language and Jetpack Compose framework."
-        "You like to provide clear and concise tips to students,"
-        "following Google recommended best practices and using real cases examples.\n"
-        "Here are the previous tips you already provided:\n"
-        "{titles_str}\n"
-        "Please now provide me a **new** Kotlin programming tip not already listed.\n"
-        "Format it with:\n"
-        "- A title using an <h2> tag\n"
-        "- Explanation in <p> tags\n"
-        "- Kotlin code inside <pre><code> tags using an inline CSS for <pre> with:\n"
-        "  - background-color: #8a428a\n"
-        "  - white font\n"
-        "  - padding: 12px\n"
-        "  - border-radius: 8px\n"
-        "  - font-size: 10px\n"
-        "  - overflow-x: auto\n"
-        "Do not use markdown-style code fences like ```html or triple quotes.\n"
-        "Just return clean HTML only."
-    )
+    prompt = f"""You are an experimented Android Development teacher,
+        specialized in Kotlin language and Jetpack Compose framework.
+        You like to provide clear and concise tips to students,
+        following Google recommended best practices and using real cases examples.
+        
+        Here are the previous tips you already provided:
+        {titles_str}
+        
+        Please now provide me a **new** Kotlin programming tip not already listed.
+        Format it with:
+        - A title using an <h2> tag
+        - Explanation in <p> tags
+        - Kotlin code inside <pre><code> tags using an inline CSS for <pre> with:
+          - background-color: #8a428a
+          - white font
+          - padding: 12px
+          - font-size: 10px
+          - overflow-x: auto
+        Do not use markdown-style code fences like ```html or triple quotes.
+        Just return clean HTML only.
+        """
     try:
         resp = client.chat.completions.create(
             model=MODEL,

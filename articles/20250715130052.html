@@ -1,0 +1,17 @@
+<h2>Using Extensions for Cleaner Code</h2>
+<p>In Kotlin, extension functions allow you to add new functionalities to existing classes without modifying their source code. This feature can significantly improve code readability and reusability in your Jetpack Compose projects. By creating extension functions for common tasks or UI components, you can simplify your code and keep your composables clean and focused.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+fun Modifier.customPadding(padding: Dp): Modifier {
+    return this.padding(padding)
+}
+
+@Composable
+fun Greeting(name: String) {
+    Text(
+        text = "Hello, $name!",
+        modifier = Modifier.customPadding(16.dp)
+    )
+}
+</code>
+</pre>
