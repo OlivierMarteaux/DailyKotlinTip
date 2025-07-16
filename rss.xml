@@ -6,12 +6,32 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Jul 2025 13:00:52 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jul 2025 07:25:23 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Lazy Column for Efficient List Rendering</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250716072523.html</link>
+      <description>&lt;h2&gt;Using Lazy Column for Efficient List Rendering&lt;/h2&gt;
+&lt;p&gt;In Jetpack Compose, when you need to display a long list of items, consider using &lt;code&gt;LazyColumn&lt;/code&gt;. This composable only renders the items that are currently visible on the screen, which improves performance and reduces memory usage. It is especially useful for dynamic lists where the number of items can change or when dealing with large datasets.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+@Composable
+fun ItemList(items: List&lt;String&gt;) {
+    LazyColumn {
+        items(items) { item -&gt;
+            Text(text = item, modifier = Modifier.padding(16.dp))
+        }
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 16 Jul 2025 07:25:23 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250716072523.html</guid>
+      </item>
     <item>
       <title>Using Extensions for Cleaner Code</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250715130052.html</link>

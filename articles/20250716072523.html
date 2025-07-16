@@ -1,0 +1,14 @@
+<h2>Using Lazy Column for Efficient List Rendering</h2>
+<p>In Jetpack Compose, when you need to display a long list of items, consider using <code>LazyColumn</code>. This composable only renders the items that are currently visible on the screen, which improves performance and reduces memory usage. It is especially useful for dynamic lists where the number of items can change or when dealing with large datasets.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+@Composable
+fun ItemList(items: List<String>) {
+    LazyColumn {
+        items(items) { item ->
+            Text(text = item, modifier = Modifier.padding(16.dp))
+        }
+    }
+}
+</code>
+</pre>
