@@ -6,12 +6,48 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Jul 2025 07:25:23 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jul 2025 07:25:13 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using ViewModels for Lifecycle-Aware Data Management</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250717072513.html</link>
+      <description>&lt;h2&gt;Using ViewModels for Lifecycle-Aware Data Management&lt;/h2&gt;
+&lt;p&gt;
+In Jetpack Compose, utilizing ViewModels helps in managing UI-related data in a lifecycle-conscious way. ViewModels survive configuration changes, such as screen rotations, which means they can hold and manage UI-related data without the need to re-fetch it. This is particularly useful for data that needs to persist across screen recreations. By leveraging ViewModels, you can reduce the amount of boilerplate needed for data retrieval and streamline your UI code.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+class MyViewModel : ViewModel() {
+    private val _data = MutableLiveData&lt;List&lt;String&gt;&gt;()
+    val data: LiveData&lt;List&lt;String&gt;&gt; get() = _data
+
+    fun fetchData() {
+        // Simulate a data fetch
+        _data.value = listOf("Item 1", "Item 2", "Item 3")
+    }
+}
+
+@Composable
+fun MyScreen(viewModel: MyViewModel = viewModel()) {
+    val data by viewModel.data.observeAsState(emptyList())
+
+    LaunchedEffect(Unit) {
+        viewModel.fetchData()
+    }
+
+    LazyColumn {
+        items(data) { item -&gt;
+            Text(text = item)
+        }
+    }
+}
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 17 Jul 2025 07:25:13 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250717072513.html</guid>
+      </item>
     <item>
       <title>Using Lazy Column for Efficient List Rendering</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250716072523.html</link>

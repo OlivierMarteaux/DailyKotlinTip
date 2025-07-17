@@ -1,0 +1,30 @@
+<h2>Using ViewModels for Lifecycle-Aware Data Management</h2>
+<p>
+In Jetpack Compose, utilizing ViewModels helps in managing UI-related data in a lifecycle-conscious way. ViewModels survive configuration changes, such as screen rotations, which means they can hold and manage UI-related data without the need to re-fetch it. This is particularly useful for data that needs to persist across screen recreations. By leveraging ViewModels, you can reduce the amount of boilerplate needed for data retrieval and streamline your UI code.
+</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+class MyViewModel : ViewModel() {
+    private val _data = MutableLiveData<List<String>>()
+    val data: LiveData<List<String>> get() = _data
+
+    fun fetchData() {
+        // Simulate a data fetch
+        _data.value = listOf("Item 1", "Item 2", "Item 3")
+    }
+}
+
+@Composable
+fun MyScreen(viewModel: MyViewModel = viewModel()) {
+    val data by viewModel.data.observeAsState(emptyList())
+
+    LaunchedEffect(Unit) {
+        viewModel.fetchData()
+    }
+
+    LazyColumn {
+        items(data) { item ->
+            Text(text = item)
+        }
+    }
+}
+</pre>
