@@ -6,12 +6,49 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Jul 2025 07:26:06 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 19 Jul 2025 07:21:41 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Data Binding for Improved UI Updates</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250719072141.html</link>
+      <description>&lt;h2&gt;Using Data Binding for Improved UI Updates&lt;/h2&gt;
+&lt;p&gt;Data Binding is a powerful feature in Android that allows you to bind UI components in your layouts to data sources in your application using a declarative format. This helps minimize boilerplate code and keeps your UI updated automatically when the underlying data changes. By utilizing Data Binding with Jetpack Compose, you can create a more responsive and maintainable UI.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+@Composable
+fun UserProfile(user: User) {
+    val name = remember { mutableStateOf(user.name) }
+    val age = remember { mutableStateOf(user.age) }
+
+    Column {
+        TextField(
+            value = name.value,
+            onValueChange = { name.value = it },
+            label = { Text("Name") }
+        )
+        TextField(
+            value = age.value.toString(),
+            onValueChange = { age.value = it.toIntOrNull() ?: 0 },
+            label = { Text("Age") }
+        )
+        Button(onClick = { updateUserProfile(name.value, age.value) }) {
+            Text("Update Profile")
+        }
+    }
+}
+
+fun updateUserProfile(name: String, age: Int) {
+    // Logic to update the user profile
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 19 Jul 2025 07:21:41 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250719072141.html</guid>
+      </item>
     <item>
       <title>Using Coroutines for Asynchronous Programming</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250718072606.html</link>
