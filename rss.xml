@@ -6,12 +6,45 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Jul 2025 07:21:41 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 20 Jul 2025 07:21:44 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Flow for Reactive Data Streams</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250720072144.html</link>
+      <description>&lt;h2&gt;Using Flow for Reactive Data Streams&lt;/h2&gt;
+&lt;p&gt;Flow is a powerful API in Kotlin that allows you to handle asynchronous data streams in a more declarative way. It fits perfectly within the architecture of Jetpack Compose, enabling you to reactively update your UI based on data changes. By using Flow, you can collect data updates, manage backpressure, and handle cancellation easily, all while keeping your code clean and readable.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+
+// A simple Flow that emits a sequence of numbers
+fun numberFlow(): Flow&lt;Int&gt; = flow {
+    for (i in 1..5) {
+        delay(1000) // Simulate some asynchronous work
+        emit(i) // Emit the next number
+    }
+}
+
+// In your ViewModel or composable function
+fun startNumberStream() {
+    viewModelScope.launch {
+        numberFlow().collect { number -&gt;
+            // Update your UI or state with the emitted number
+            println("Received number: $number")
+        }
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 20 Jul 2025 07:21:44 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250720072144.html</guid>
+      </item>
     <item>
       <title>Using Data Binding for Improved UI Updates</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250719072141.html</link>

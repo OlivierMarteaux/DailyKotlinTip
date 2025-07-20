@@ -1,0 +1,27 @@
+<h2>Using Flow for Reactive Data Streams</h2>
+<p>Flow is a powerful API in Kotlin that allows you to handle asynchronous data streams in a more declarative way. It fits perfectly within the architecture of Jetpack Compose, enabling you to reactively update your UI based on data changes. By using Flow, you can collect data updates, manage backpressure, and handle cancellation easily, all while keeping your code clean and readable.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+
+// A simple Flow that emits a sequence of numbers
+fun numberFlow(): Flow<Int> = flow {
+    for (i in 1..5) {
+        delay(1000) // Simulate some asynchronous work
+        emit(i) // Emit the next number
+    }
+}
+
+// In your ViewModel or composable function
+fun startNumberStream() {
+    viewModelScope.launch {
+        numberFlow().collect { number ->
+            // Update your UI or state with the emitted number
+            println("Received number: $number")
+        }
+    }
+}
+</code>
+</pre>
