@@ -1,0 +1,33 @@
+<h2>Using Dependency Injection with Hilt for Better Code Management</h2>
+<p>
+Dependency Injection (DI) is a design pattern that allows you to remove hard-coded dependencies and make your code more modular, testable, and maintainable. Hilt is a popular DI framework for Android that simplifies the process of integrating DI in your application, following best practices recommended by Google. By using Hilt, you can easily manage your dependencies and reduce boilerplate code.
+</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+@HiltAndroidApp
+class MyApplication : Application()
+
+@AndroidEntryPoint
+class MainActivity : AppCompatActivity() {
+
+    @Inject
+    lateinit var myRepository: MyRepository
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            // Your Compose UI code here
+        }
+    }
+}
+
+@Module
+@InstallIn(SingletonComponent::class)
+object AppModule {
+
+    @Provides
+    @Singleton
+    fun provideMyRepository(): MyRepository {
+        return MyRepositoryImpl()
+    }
+}
+</pre>

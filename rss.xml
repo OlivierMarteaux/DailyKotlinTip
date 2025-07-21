@@ -6,12 +6,51 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Jul 2025 07:21:44 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 21 Jul 2025 07:31:36 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Dependency Injection with Hilt for Better Code Management</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250721073136.html</link>
+      <description>&lt;h2&gt;Using Dependency Injection with Hilt for Better Code Management&lt;/h2&gt;
+&lt;p&gt;
+Dependency Injection (DI) is a design pattern that allows you to remove hard-coded dependencies and make your code more modular, testable, and maintainable. Hilt is a popular DI framework for Android that simplifies the process of integrating DI in your application, following best practices recommended by Google. By using Hilt, you can easily manage your dependencies and reduce boilerplate code.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+@HiltAndroidApp
+class MyApplication : Application()
+
+@AndroidEntryPoint
+class MainActivity : AppCompatActivity() {
+
+    @Inject
+    lateinit var myRepository: MyRepository
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            // Your Compose UI code here
+        }
+    }
+}
+
+@Module
+@InstallIn(SingletonComponent::class)
+object AppModule {
+
+    @Provides
+    @Singleton
+    fun provideMyRepository(): MyRepository {
+        return MyRepositoryImpl()
+    }
+}
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 21 Jul 2025 07:31:36 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250721073136.html</guid>
+      </item>
     <item>
       <title>Using Flow for Reactive Data Streams</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250720072144.html</link>
