@@ -6,12 +6,35 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Jul 2025 07:31:36 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jul 2025 07:26:29 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Sequences for Efficient Data Processing</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250722072629.html</link>
+      <description>&lt;h2&gt;Using Sequences for Efficient Data Processing&lt;/h2&gt;
+&lt;p&gt;Sequences in Kotlin provide a way to process collections of data in a more efficient manner. They allow for lazy evaluation, meaning that elements are computed only when they are needed. This can save memory and improve performance, especially with large datasets. By using sequences, you can chain operations without creating intermediate collections, making your code cleaner and more efficient.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+fun main() {
+    val numbers = generateSequence(1) { it + 1 } // Infinite sequence of natural numbers
+    
+    // Take the first 10 even numbers and convert them to a list
+    val evenNumbers = numbers
+        .filter { it % 2 == 0 }
+        .take(10)
+        .toList()
+    
+    println(evenNumbers) // Output: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 22 Jul 2025 07:26:29 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250722072629.html</guid>
+      </item>
     <item>
       <title>Using Dependency Injection with Hilt for Better Code Management</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250721073136.html</link>

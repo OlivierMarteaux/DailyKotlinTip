@@ -1,0 +1,17 @@
+<h2>Using Sequences for Efficient Data Processing</h2>
+<p>Sequences in Kotlin provide a way to process collections of data in a more efficient manner. They allow for lazy evaluation, meaning that elements are computed only when they are needed. This can save memory and improve performance, especially with large datasets. By using sequences, you can chain operations without creating intermediate collections, making your code cleaner and more efficient.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+fun main() {
+    val numbers = generateSequence(1) { it + 1 } // Infinite sequence of natural numbers
+    
+    // Take the first 10 even numbers and convert them to a list
+    val evenNumbers = numbers
+        .filter { it % 2 == 0 }
+        .take(10)
+        .toList()
+    
+    println(evenNumbers) // Output: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+}
+</code>
+</pre>
