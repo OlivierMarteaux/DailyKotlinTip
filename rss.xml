@@ -6,12 +6,30 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jul 2025 07:26:29 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 23 Jul 2025 07:27:12 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Sequences for Lazy Evaluation</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250723072712.html</link>
+      <description>&lt;h2&gt;Using Sequences for Lazy Evaluation&lt;/h2&gt;
+&lt;p&gt;Sequences in Kotlin provide a way to perform operations on collections in a lazy manner. This means that computations are only performed when the results are actually needed, which can lead to performance improvements, especially when dealing with large datasets. By using sequences, you can chain operations like `map`, `filter`, and `flatMap` without the overhead of creating intermediate collections.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = (1..1_000_000).asSequence() // Create a sequence of numbers
+
+val evenSquares = numbers
+    .filter { it % 2 == 0 } // Filter even numbers
+    .map { it * it } // Square them
+    .toList() // Convert to a list only when needed
+
+println(evenSquares.take(10)) // Output the first 10 squares of even numbers
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 23 Jul 2025 07:27:12 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250723072712.html</guid>
+      </item>
     <item>
       <title>Using Sequences for Efficient Data Processing</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250722072629.html</link>

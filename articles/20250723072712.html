@@ -1,0 +1,12 @@
+<h2>Using Sequences for Lazy Evaluation</h2>
+<p>Sequences in Kotlin provide a way to perform operations on collections in a lazy manner. This means that computations are only performed when the results are actually needed, which can lead to performance improvements, especially when dealing with large datasets. By using sequences, you can chain operations like `map`, `filter`, and `flatMap` without the overhead of creating intermediate collections.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = (1..1_000_000).asSequence() // Create a sequence of numbers
+
+val evenSquares = numbers
+    .filter { it % 2 == 0 } // Filter even numbers
+    .map { it * it } // Square them
+    .toList() // Convert to a list only when needed
+
+println(evenSquares.take(10)) // Output the first 10 squares of even numbers
+</pre>
