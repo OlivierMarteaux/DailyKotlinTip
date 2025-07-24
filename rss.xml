@@ -6,12 +6,42 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Jul 2025 07:27:12 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jul 2025 07:26:28 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Sealed Interfaces for Enhanced Type Safety</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250724072628.html</link>
+      <description>&lt;h2&gt;Using Sealed Interfaces for Enhanced Type Safety&lt;/h2&gt;
+&lt;p&gt;
+Sealed interfaces are a powerful feature in Kotlin that allow you to define a restricted hierarchy of types. By using sealed interfaces, you can ensure that all implementations are known at compile time, providing better type safety and exhaustive when expressions. This is particularly useful in state management or when dealing with multiple data types in a single API.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+interface ApiResponse
+
+sealed interface Success : ApiResponse {
+    data class Data(val content: String) : Success
+}
+
+sealed interface Error : ApiResponse {
+    data class NotFound(val message: String) : Error
+    data class ServerError(val message: String) : Error
+}
+
+fun handleResponse(response: ApiResponse) {
+    when (response) {
+        is Success.Data -&gt; println("Data received: ${response.content}")
+        is Error.NotFound -&gt; println("Error: ${response.message}")
+        is Error.ServerError -&gt; println("Error: ${response.message}")
+    }
+}
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 24 Jul 2025 07:26:28 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250724072628.html</guid>
+      </item>
     <item>
       <title>Using Sequences for Lazy Evaluation</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250723072712.html</link>
