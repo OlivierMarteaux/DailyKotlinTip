@@ -6,12 +6,53 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Jul 2025 07:26:28 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jul 2025 07:26:30 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Sealed Classes for Better Event Handling</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250725072630.html</link>
+      <description>&lt;h2&gt;Using Sealed Classes for Better Event Handling&lt;/h2&gt;
+&lt;p&gt;Sealed classes in Kotlin provide a way to define restricted class hierarchies, which can be beneficial for managing UI events or state changes in a structured manner. When using sealed classes, you can represent different states or events explicitly, making your code more readable and maintainable. This approach is particularly useful in Jetpack Compose when dealing with various UI interactions, allowing you to handle each case effectively and ensuring type safety.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+sealed class UiEvent {
+    object OnButtonClick : UiEvent()
+    data class OnTextChange(val newText: String) : UiEvent()
+    object OnSubmit : UiEvent()
+}
+
+// Example usage in a ViewModel
+class MyViewModel : ViewModel() {
+    private val _eventFlow = MutableSharedFlow&lt;UiEvent&gt;()
+    val eventFlow = _eventFlow.asSharedFlow()
+
+    fun onButtonClick() {
+        viewModelScope.launch {
+            _eventFlow.emit(UiEvent.OnButtonClick)
+        }
+    }
+
+    fun onTextChange(newText: String) {
+        viewModelScope.launch {
+            _eventFlow.emit(UiEvent.OnTextChange(newText))
+        }
+    }
+
+    fun onSubmit() {
+        viewModelScope.launch {
+            _eventFlow.emit(UiEvent.OnSubmit)
+        }
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 25 Jul 2025 07:26:30 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250725072630.html</guid>
+      </item>
     <item>
       <title>Using Sealed Interfaces for Enhanced Type Safety</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250724072628.html</link>

@@ -1,0 +1,35 @@
+<h2>Using Sealed Classes for Better Event Handling</h2>
+<p>Sealed classes in Kotlin provide a way to define restricted class hierarchies, which can be beneficial for managing UI events or state changes in a structured manner. When using sealed classes, you can represent different states or events explicitly, making your code more readable and maintainable. This approach is particularly useful in Jetpack Compose when dealing with various UI interactions, allowing you to handle each case effectively and ensuring type safety.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+sealed class UiEvent {
+    object OnButtonClick : UiEvent()
+    data class OnTextChange(val newText: String) : UiEvent()
+    object OnSubmit : UiEvent()
+}
+
+// Example usage in a ViewModel
+class MyViewModel : ViewModel() {
+    private val _eventFlow = MutableSharedFlow<UiEvent>()
+    val eventFlow = _eventFlow.asSharedFlow()
+
+    fun onButtonClick() {
+        viewModelScope.launch {
+            _eventFlow.emit(UiEvent.OnButtonClick)
+        }
+    }
+
+    fun onTextChange(newText: String) {
+        viewModelScope.launch {
+            _eventFlow.emit(UiEvent.OnTextChange(newText))
+        }
+    }
+
+    fun onSubmit() {
+        viewModelScope.launch {
+            _eventFlow.emit(UiEvent.OnSubmit)
+        }
+    }
+}
+</code>
+</pre>
