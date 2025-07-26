@@ -6,12 +6,39 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Jul 2025 07:26:30 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 26 Jul 2025 07:22:42 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Composition Local for Dependency Injection in Jetpack Compose</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250726072242.html</link>
+      <description>&lt;h2&gt;Using Composition Local for Dependency Injection in Jetpack Compose&lt;/h2&gt;
+&lt;p&gt;Composition Local is a powerful feature in Jetpack Compose that allows you to pass data down the composable tree without having to explicitly pass it through parameters. This is particularly useful for dependency injection, where you want to provide dependencies to your composables in a clean and efficient way.&lt;/p&gt;
+&lt;p&gt;By defining a Composition Local for your dependencies, you can easily access them within your composables, promoting a cleaner architecture and reducing boilerplate code.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val LocalUserRepository = compositionLocalOf&lt;UserRepository&gt; { error("No UserRepository provided") }
+
+@Composable
+fun MyApp() {
+    val userRepository = UserRepository() // Create your repository
+    CompositionLocalProvider(LocalUserRepository provides userRepository) {
+        // Now you can access LocalUserRepository in any child composable
+        HomeScreen()
+    }
+}
+
+@Composable
+fun HomeScreen() {
+    val userRepository = LocalUserRepository.current
+    // Use userRepository to fetch user data
+}
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 26 Jul 2025 07:22:42 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250726072242.html</guid>
+      </item>
     <item>
       <title>Using Sealed Classes for Better Event Handling</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250725072630.html</link>

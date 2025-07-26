@@ -1,0 +1,21 @@
+<h2>Using Composition Local for Dependency Injection in Jetpack Compose</h2>
+<p>Composition Local is a powerful feature in Jetpack Compose that allows you to pass data down the composable tree without having to explicitly pass it through parameters. This is particularly useful for dependency injection, where you want to provide dependencies to your composables in a clean and efficient way.</p>
+<p>By defining a Composition Local for your dependencies, you can easily access them within your composables, promoting a cleaner architecture and reducing boilerplate code.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val LocalUserRepository = compositionLocalOf<UserRepository> { error("No UserRepository provided") }
+
+@Composable
+fun MyApp() {
+    val userRepository = UserRepository() // Create your repository
+    CompositionLocalProvider(LocalUserRepository provides userRepository) {
+        // Now you can access LocalUserRepository in any child composable
+        HomeScreen()
+    }
+}
+
+@Composable
+fun HomeScreen() {
+    val userRepository = LocalUserRepository.current
+    // Use userRepository to fetch user data
+}
+</pre>
