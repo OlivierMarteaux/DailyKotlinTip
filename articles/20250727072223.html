@@ -1,0 +1,22 @@
+<h2>Using Higher-Order Functions for Code Reusability</h2>
+<p>
+Higher-order functions are functions that can take other functions as parameters or return them. This feature allows for greater flexibility and reusability in your code. By defining common behavior in higher-order functions, you can eliminate redundancy and improve maintainability.
+</p>
+<p>
+For example, consider a situation where you need to perform a specific operation on a list of numbers, like doubling each number. Instead of writing the doubling logic in multiple places, you can create a higher-order function that takes another function as a parameter to apply to each element in the list.
+</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+fun <T, R> List<T>.customMap(transform: (T) -> R): List<R> {
+    val result = mutableListOf<R>()
+    for (item in this) {
+        result.add(transform(item))
+    }
+    return result
+}
+
+fun main() {
+    val numbers = listOf(1, 2, 3, 4, 5)
+    val doubled = numbers.customMap { it * 2 }
+    println(doubled) // Output: [2, 4, 6, 8, 10]
+}
+</pre>
