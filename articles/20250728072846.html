@@ -1,0 +1,15 @@
+<h2>Using Inline Classes for Type-Safe Wrapping</h2>
+<p>Inline classes in Kotlin provide a way to create type-safe wrappers around existing types, which can help improve code readability and maintainability. They are particularly useful for representing distinct types that have the same underlying representation but should be treated differently in the code. By using inline classes, you can avoid errors related to using the wrong type and make your intentions clearer to anyone reading your code.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+inline class UserId(val id: String)
+
+fun getUserById(userId: UserId) {
+    // Fetch user from the database using the provided userId
+    println("Fetching user with ID: ${userId.id}")
+}
+
+fun main() {
+    val userId = UserId("12345")
+    getUserById(userId)
+}
+</pre>
