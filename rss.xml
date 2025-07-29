@@ -6,12 +6,31 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Jul 2025 07:28:46 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jul 2025 07:27:36 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Data Classes for Immutable Data Structures</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250729072736.html</link>
+      <description>&lt;h2&gt;Using Data Classes for Immutable Data Structures&lt;/h2&gt;
+&lt;p&gt;Data classes in Kotlin are a concise way to create classes that are primarily used to hold data. They provide built-in functionalities like `equals()`, `hashCode()`, and `toString()` methods, which makes them ideal for representing immutable data structures. By using data classes, you ensure that your data is immutable, which can lead to safer and more predictable code, especially in concurrent environments.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+data class User(val id: Int, val name: String, val email: String)
+
+fun main() {
+    val user1 = User(1, "Alice", "alice@example.com")
+    val user2 = user1.copy(name = "Bob") // Creates a new instance with modified name
+
+    println(user1) // Output: User(id=1, name=Alice, email=alice@example.com)
+    println(user2) // Output: User(id=1, name=Bob, email=alice@example.com)
+}
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 29 Jul 2025 07:27:36 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250729072736.html</guid>
+      </item>
     <item>
       <title>Using Inline Classes for Type-Safe Wrapping</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250728072846.html</link>
