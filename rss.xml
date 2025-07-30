@@ -6,12 +6,34 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Jul 2025 07:27:36 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jul 2025 07:28:18 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Delegated Properties for Cleaner Code</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250730072818.html</link>
+      <description>&lt;h2&gt;Using Delegated Properties for Cleaner Code&lt;/h2&gt;
+&lt;p&gt;Delegated properties in Kotlin allow you to delegate the responsibility of getting and setting a property to another object. This can help reduce boilerplate code and enhance readability. A common use case is using the `lazy` delegate for lazy initialization of properties, which ensures the property is only computed when accessed for the first time.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+class User {
+    var name: String by lazy {
+        println("Computing name...")
+        "John Doe"
+    }
+}
+
+fun main() {
+    val user = User()
+    println(user.name) // Triggers lazy initialization
+    println(user.name) // Uses cached value
+}
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 30 Jul 2025 07:28:18 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250730072818.html</guid>
+      </item>
     <item>
       <title>Using Data Classes for Immutable Data Structures</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250729072736.html</link>
