@@ -1,0 +1,17 @@
+<h2>Using Companion Objects for Factory Methods</h2>
+<p>Companion objects in Kotlin allow you to define methods and properties that are tied to the class rather than instances of the class. This is particularly useful for creating factory methods, which can provide a clear and organized way to instantiate objects with specific configurations. By using companion objects, you can encapsulate the creation logic within the class itself, enhancing readability and maintainability.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+code class User private constructor(val name: String, val age: Int) {
+    companion object {
+        fun create(name: String, age: Int): User {
+            // Additional validation or processing can be done here
+            return User(name, age)
+        }
+    }
+}
+
+fun main() {
+    val user = User.create("Alice", 30)
+    println("User Name: ${user.name}, Age: ${user.age}")
+}
+</pre>

@@ -6,12 +6,35 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Jul 2025 07:28:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 31 Jul 2025 07:27:10 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Companion Objects for Factory Methods</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250731072710.html</link>
+      <description>&lt;h2&gt;Using Companion Objects for Factory Methods&lt;/h2&gt;
+&lt;p&gt;Companion objects in Kotlin allow you to define methods and properties that are tied to the class rather than instances of the class. This is particularly useful for creating factory methods, which can provide a clear and organized way to instantiate objects with specific configurations. By using companion objects, you can encapsulate the creation logic within the class itself, enhancing readability and maintainability.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+code class User private constructor(val name: String, val age: Int) {
+    companion object {
+        fun create(name: String, age: Int): User {
+            // Additional validation or processing can be done here
+            return User(name, age)
+        }
+    }
+}
+
+fun main() {
+    val user = User.create("Alice", 30)
+    println("User Name: ${user.name}, Age: ${user.age}")
+}
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 31 Jul 2025 07:27:10 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250731072710.html</guid>
+      </item>
     <item>
       <title>Using Delegated Properties for Cleaner Code</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250730072818.html</link>
