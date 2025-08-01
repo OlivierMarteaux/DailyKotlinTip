@@ -1,0 +1,15 @@
+<h2>Using Extension Functions for Enhanced Functionality</h2>
+<p>Extension functions allow you to add new functionality to existing classes without modifying their code. This is particularly useful for adding utility methods to standard library classes or third-party libraries, making your code cleaner and more expressive. By using extension functions, you can enhance readability and maintainability while keeping your code organized.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+fun String.isEmailValid(): Boolean {
+    return android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
+}
+
+// Usage
+val email = "example@example.com"
+if (email.isEmailValid()) {
+    println("The email is valid.")
+} else {
+    println("The email is invalid.")
+}
+</pre>

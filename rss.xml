@@ -6,12 +6,33 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Jul 2025 07:27:10 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 01 Aug 2025 07:30:06 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Extension Functions for Enhanced Functionality</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250801073006.html</link>
+      <description>&lt;h2&gt;Using Extension Functions for Enhanced Functionality&lt;/h2&gt;
+&lt;p&gt;Extension functions allow you to add new functionality to existing classes without modifying their code. This is particularly useful for adding utility methods to standard library classes or third-party libraries, making your code cleaner and more expressive. By using extension functions, you can enhance readability and maintainability while keeping your code organized.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+fun String.isEmailValid(): Boolean {
+    return android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
+}
+
+// Usage
+val email = "example@example.com"
+if (email.isEmailValid()) {
+    println("The email is valid.")
+} else {
+    println("The email is invalid.")
+}
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 01 Aug 2025 07:30:06 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250801073006.html</guid>
+      </item>
     <item>
       <title>Using Companion Objects for Factory Methods</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250731072710.html</link>
