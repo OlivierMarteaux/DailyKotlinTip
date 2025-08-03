@@ -1,0 +1,11 @@
+<h2>Using the 'let' Scope Function for Null Safety</h2>
+<p>The 'let' scope function is a powerful tool in Kotlin that allows you to execute a block of code only if the object is not null. This can enhance null safety and reduce boilerplate code when working with nullable types. It is particularly useful when you want to perform operations on a variable that might be null without explicitly checking for nullity each time.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val name: String? = "Kotlin"
+
+name?.let { 
+    println("The length of the name is ${it.length}") 
+} ?: run { 
+    println("Name is null") 
+}
+</pre>
