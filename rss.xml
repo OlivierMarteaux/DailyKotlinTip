@@ -6,12 +6,49 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Aug 2025 07:22:34 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 Aug 2025 07:32:22 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Flow with StateFlow for State Management</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250804073222.html</link>
+      <description>&lt;h2&gt;Using Flow with StateFlow for State Management&lt;/h2&gt;
+&lt;p&gt;
+StateFlow is a state-holder observable flow that is designed to hold a single updatable data value and emit updates to its collectors. It is particularly useful in Jetpack Compose for managing UI state in a reactive way. When combined with ViewModel, it allows for a clean separation of UI and state logic, making it easier to manage complex UI states.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+import androidx.compose.runtime.collectAsState
+import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+
+class MyViewModel : ViewModel() {
+    private val _uiState = MutableStateFlow("Initial State")
+    val uiState: StateFlow&lt;String&gt; = _uiState
+
+    fun updateState(newState: String) {
+        _uiState.value = newState
+    }
+}
+
+// In your Composable function
+@Composable
+fun MyScreen(viewModel: MyViewModel) {
+    val uiState = viewModel.uiState.collectAsState()
+    
+    Text(text = uiState.value)
+    
+    Button(onClick = { viewModel.updateState("Updated State") }) {
+        Text("Update State")
+    }
+}
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 04 Aug 2025 07:32:22 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250804073222.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Scope Function for Null Safety</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250803072234.html</link>
