@@ -1,0 +1,14 @@
+<h2>Using Lazy Initialization for Resource Management</h2>
+<p>Lazy initialization allows you to defer the creation of an object until it is actually needed, which can help improve performance and resource management in your application. This is particularly useful for heavy resources that may not always be required. Kotlin provides a built-in `lazy` delegate that can be used for this purpose.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val heavyResource: Resource by lazy {
+    println("Creating heavy resource...")
+    Resource() // Assume Resource is a class that requires significant resources to instantiate
+}
+
+// Usage
+fun useResource() {
+    // The heavyResource is created only when this function is called
+    println(heavyResource)
+}
+</pre>

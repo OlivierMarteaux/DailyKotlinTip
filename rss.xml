@@ -6,12 +6,32 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Aug 2025 07:32:22 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 05 Aug 2025 07:29:34 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Lazy Initialization for Resource Management</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250805072934.html</link>
+      <description>&lt;h2&gt;Using Lazy Initialization for Resource Management&lt;/h2&gt;
+&lt;p&gt;Lazy initialization allows you to defer the creation of an object until it is actually needed, which can help improve performance and resource management in your application. This is particularly useful for heavy resources that may not always be required. Kotlin provides a built-in `lazy` delegate that can be used for this purpose.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val heavyResource: Resource by lazy {
+    println("Creating heavy resource...")
+    Resource() // Assume Resource is a class that requires significant resources to instantiate
+}
+
+// Usage
+fun useResource() {
+    // The heavyResource is created only when this function is called
+    println(heavyResource)
+}
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 05 Aug 2025 07:29:34 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250805072934.html</guid>
+      </item>
     <item>
       <title>Using Flow with StateFlow for State Management</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250804073222.html</link>
