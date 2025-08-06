@@ -1,0 +1,17 @@
+<h2>Using Sealed Interfaces for Enhanced Type Safety in Complex Hierarchies</h2>
+<p>Sealed interfaces in Kotlin allow you to define a restricted hierarchy of types, which can be especially useful when modeling complex data structures or states in your application. By using sealed interfaces, you can ensure that all possible types are known at compile time, enabling exhaustive `when` expressions. This feature enhances type safety and reduces runtime errors, making your code more robust and maintainable.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+sealed interface Result
+
+data class Success(val data: String) : Result
+data class Error(val exception: Exception) : Result
+
+fun handleResult(result: Result) {
+    when (result) {
+        is Success -> println("Data received: ${result.data}")
+        is Error -> println("Error occurred: ${result.exception.message}")
+    }
+}
+</code>
+</pre>
