@@ -6,12 +6,36 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Aug 2025 07:29:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 07 Aug 2025 07:28:47 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'when' Expression for Cleaner Conditional Logic</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250807072847.html</link>
+      <description>&lt;h2&gt;Using the 'when' Expression for Cleaner Conditional Logic&lt;/h2&gt;
+&lt;p&gt;The 'when' expression in Kotlin provides a more readable and concise way to handle multiple conditional branches compared to traditional if-else statements. It can be used as an expression, meaning it can return a value, which makes it ideal for assigning values based on conditions. Additionally, it can match against types, ranges, and even conditions directly, enhancing code clarity.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+fun getColorDescription(color: String): String {
+    return when (color) {
+        "RED" -&gt; "Color of passion and energy"
+        "GREEN" -&gt; "Color of nature and tranquility"
+        "BLUE" -&gt; "Color of calm and stability"
+        "YELLOW" -&gt; "Color of happiness and optimism"
+        else -&gt; "Unknown color"
+    }
+}
+
+// Usage
+val colorDescription = getColorDescription("RED") // Output: Color of passion and energy
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 07 Aug 2025 07:28:47 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250807072847.html</guid>
+      </item>
     <item>
       <title>Using Sealed Interfaces for Enhanced Type Safety in Complex Hierarchies</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250806072915.html</link>

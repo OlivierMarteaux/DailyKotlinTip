@@ -1,0 +1,18 @@
+<h2>Using the 'when' Expression for Cleaner Conditional Logic</h2>
+<p>The 'when' expression in Kotlin provides a more readable and concise way to handle multiple conditional branches compared to traditional if-else statements. It can be used as an expression, meaning it can return a value, which makes it ideal for assigning values based on conditions. Additionally, it can match against types, ranges, and even conditions directly, enhancing code clarity.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+fun getColorDescription(color: String): String {
+    return when (color) {
+        "RED" -> "Color of passion and energy"
+        "GREEN" -> "Color of nature and tranquility"
+        "BLUE" -> "Color of calm and stability"
+        "YELLOW" -> "Color of happiness and optimism"
+        else -> "Unknown color"
+    }
+}
+
+// Usage
+val colorDescription = getColorDescription("RED") // Output: Color of passion and energy
+</code>
+</pre>
