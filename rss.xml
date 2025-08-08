@@ -6,12 +6,31 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Aug 2025 07:28:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 08 Aug 2025 07:28:19 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'run' Scope Function for Contextual Execution</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250808072819.html</link>
+      <description>&lt;h2&gt;Using the 'run' Scope Function for Contextual Execution&lt;/h2&gt;
+&lt;p&gt;The 'run' scope function in Kotlin allows you to execute a block of code within the context of an object. It is particularly useful when you want to perform multiple operations on the same object without repeating its name. This enhances readability and can help to reduce boilerplate code. The result of the 'run' block is the last expression executed within it, making it suitable for initializing objects or performing computations.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+data class User(var name: String, var age: Int)
+
+fun main() {
+    val user = User("Alice", 25).run {
+        age += 1 // Increment age by 1
+        "User's name is $name and age is $age" // Last expression is the result
+    }
+    println(user) // Outputs: User's name is Alice and age is 26
+}
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 08 Aug 2025 07:28:19 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250808072819.html</guid>
+      </item>
     <item>
       <title>Using the 'when' Expression for Cleaner Conditional Logic</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250807072847.html</link>
