@@ -1,0 +1,15 @@
+<h2>Using Coroutines for Asynchronous Programming</h2>
+<p>Kotlin Coroutines provide a powerful way to manage asynchronous programming in a more readable and maintainable manner compared to traditional callback-based approaches. By using coroutines, you can write asynchronous code in a sequential style, making it easier to reason about and debug. Coroutines can be used for tasks like network requests, database operations, or any long-running operations without blocking the main thread.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+fun main() = runBlocking {
+    launch {
+        val result = fetchData()
+        println("Data fetched: $result")
+    }
+}
+
+suspend fun fetchData(): String {
+    delay(1000) // Simulate a long-running task
+    return "Hello, Coroutines!"
+}
+</pre>

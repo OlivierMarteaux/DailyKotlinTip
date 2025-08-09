@@ -6,12 +6,33 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Aug 2025 07:28:19 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 09 Aug 2025 07:21:25 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Coroutines for Asynchronous Programming</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250809072125.html</link>
+      <description>&lt;h2&gt;Using Coroutines for Asynchronous Programming&lt;/h2&gt;
+&lt;p&gt;Kotlin Coroutines provide a powerful way to manage asynchronous programming in a more readable and maintainable manner compared to traditional callback-based approaches. By using coroutines, you can write asynchronous code in a sequential style, making it easier to reason about and debug. Coroutines can be used for tasks like network requests, database operations, or any long-running operations without blocking the main thread.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+fun main() = runBlocking {
+    launch {
+        val result = fetchData()
+        println("Data fetched: $result")
+    }
+}
+
+suspend fun fetchData(): String {
+    delay(1000) // Simulate a long-running task
+    return "Hello, Coroutines!"
+}
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 09 Aug 2025 07:21:25 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250809072125.html</guid>
+      </item>
     <item>
       <title>Using the 'run' Scope Function for Contextual Execution</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250808072819.html</link>
