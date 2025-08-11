@@ -6,12 +6,29 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Aug 2025 07:21:15 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 Aug 2025 07:27:54 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Object Expressions for Anonymous Class Implementations</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250811072754.html</link>
+      <description>&lt;h2&gt;Using Object Expressions for Anonymous Class Implementations&lt;/h2&gt;
+&lt;p&gt;Object expressions in Kotlin allow you to create anonymous classes on the fly, which can be particularly useful for implementing interfaces or abstract classes without the need for a full-fledged named class. This helps keep your code concise and focused, especially when you only need a specific instance with overridden methods for a short time.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val myRunnable = object : Runnable {
+    override fun run() {
+        println("Running in a separate thread")
+    }
+}
+
+Thread(myRunnable).start()
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 11 Aug 2025 07:27:54 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250811072754.html</guid>
+      </item>
     <item>
       <title>Using the 'with' Scope Function for Simplified Object Operations</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250810072115.html</link>

@@ -1,0 +1,11 @@
+<h2>Using Object Expressions for Anonymous Class Implementations</h2>
+<p>Object expressions in Kotlin allow you to create anonymous classes on the fly, which can be particularly useful for implementing interfaces or abstract classes without the need for a full-fledged named class. This helps keep your code concise and focused, especially when you only need a specific instance with overridden methods for a short time.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val myRunnable = object : Runnable {
+    override fun run() {
+        println("Running in a separate thread")
+    }
+}
+
+Thread(myRunnable).start()
+</pre>
