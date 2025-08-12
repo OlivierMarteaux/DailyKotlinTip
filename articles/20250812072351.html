@@ -1,0 +1,19 @@
+<h2>Using Inline Functions for Performance Optimization</h2>
+<p>Inline functions in Kotlin allow you to reduce the overhead associated with function calls, particularly when using higher-order functions. When a function is marked as inline, the compiler replaces the function call with the actual function body during compilation. This can lead to performance improvements, especially in tight loops or frequently called functions.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+inline fun <T> List<T>.customFilter(predicate: (T) -> Boolean): List<T> {
+    val result = mutableListOf<T>()
+    for (item in this) {
+        if (predicate(item)) {
+            result.add(item)
+        }
+    }
+    return result
+}
+
+fun main() {
+    val numbers = listOf(1, 2, 3, 4, 5)
+    val evenNumbers = numbers.customFilter { it % 2 == 0 }
+    println(evenNumbers) // Output: [2, 4]
+}
+</pre>

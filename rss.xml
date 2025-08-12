@@ -6,12 +6,37 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Aug 2025 07:27:54 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 12 Aug 2025 07:23:51 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Inline Functions for Performance Optimization</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250812072351.html</link>
+      <description>&lt;h2&gt;Using Inline Functions for Performance Optimization&lt;/h2&gt;
+&lt;p&gt;Inline functions in Kotlin allow you to reduce the overhead associated with function calls, particularly when using higher-order functions. When a function is marked as inline, the compiler replaces the function call with the actual function body during compilation. This can lead to performance improvements, especially in tight loops or frequently called functions.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+inline fun &lt;T&gt; List&lt;T&gt;.customFilter(predicate: (T) -&gt; Boolean): List&lt;T&gt; {
+    val result = mutableListOf&lt;T&gt;()
+    for (item in this) {
+        if (predicate(item)) {
+            result.add(item)
+        }
+    }
+    return result
+}
+
+fun main() {
+    val numbers = listOf(1, 2, 3, 4, 5)
+    val evenNumbers = numbers.customFilter { it % 2 == 0 }
+    println(evenNumbers) // Output: [2, 4]
+}
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 12 Aug 2025 07:23:51 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250812072351.html</guid>
+      </item>
     <item>
       <title>Using Object Expressions for Anonymous Class Implementations</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250811072754.html</link>
