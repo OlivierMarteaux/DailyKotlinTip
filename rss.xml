@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Aug 2025 07:23:51 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 13 Aug 2025 07:24:15 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeIf' Function for Conditional Value Assignment</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250813072415.html</link>
+      <description>&lt;h2&gt;Using the 'takeIf' Function for Conditional Value Assignment&lt;/h2&gt;
+&lt;p&gt;
+The 'takeIf' function is a useful standard library function in Kotlin that allows you to conditionally return a value based on a predicate. It helps you simplify code when you want to assign a variable only if it meets certain conditions. This can make your code cleaner and more expressive.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val input: String? = "Hello, Kotlin"
+val result: String? = input?.takeIf { it.length &gt; 5 }
+// result will be null if input length is not greater than 5
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 13 Aug 2025 07:24:15 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250813072415.html</guid>
+      </item>
     <item>
       <title>Using Inline Functions for Performance Optimization</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250812072351.html</link>
