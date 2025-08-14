@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Aug 2025 07:24:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 14 Aug 2025 07:23:52 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Resource Management</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250814072352.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Resource Management&lt;/h2&gt;
+&lt;p&gt;The 'let' function in Kotlin is not just for null safety; it also serves as an excellent tool for resource management. By using 'let', you can ensure that resources are released properly after their usage, especially when working with objects that require cleanup, such as database connections or file handles. This approach enhances code readability and maintains clean resource management practices.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val file = File("example.txt").let { 
+    it.bufferedReader().use { reader -&gt; 
+        reader.readText() 
+    } 
+}
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 14 Aug 2025 07:23:52 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250814072352.html</guid>
+      </item>
     <item>
       <title>Using the 'takeIf' Function for Conditional Value Assignment</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250813072415.html</link>
