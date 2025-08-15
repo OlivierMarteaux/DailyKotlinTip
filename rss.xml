@@ -6,12 +6,30 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Aug 2025 07:23:52 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 15 Aug 2025 07:22:38 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Type Aliases for Improved Code Readability</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250815072238.html</link>
+      <description>&lt;h2&gt;Using Type Aliases for Improved Code Readability&lt;/h2&gt;
+&lt;p&gt;Type aliases in Kotlin allow you to create an alternative name for a type. This can significantly enhance code readability, especially when dealing with complex generic types or long type names. By using type aliases, you can simplify type annotations and make your code cleaner and easier to understand.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+typealias UserId = String
+typealias UserMap = Map&lt;UserId, User&gt;
+
+data class User(val id: UserId, val name: String)
+
+fun getUserName(userMap: UserMap, userId: UserId): String? {
+    return userMap[userId]?.name
+}
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 15 Aug 2025 07:22:38 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250815072238.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function for Resource Management</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250814072352.html</link>

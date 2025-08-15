@@ -1,0 +1,12 @@
+<h2>Using Type Aliases for Improved Code Readability</h2>
+<p>Type aliases in Kotlin allow you to create an alternative name for a type. This can significantly enhance code readability, especially when dealing with complex generic types or long type names. By using type aliases, you can simplify type annotations and make your code cleaner and easier to understand.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+typealias UserId = String
+typealias UserMap = Map<UserId, User>
+
+data class User(val id: UserId, val name: String)
+
+fun getUserName(userMap: UserMap, userId: UserId): String? {
+    return userMap[userId]?.name
+}
+</pre>
