@@ -1,0 +1,10 @@
+<h2>Using the 'also' Scope Function for Side Effects</h2>
+<p>The 'also' scope function is a great way to perform side effects on an object while returning the object itself. This can be particularly useful when you want to perform operations, such as logging or modifying properties, without changing the original object. It enhances code readability by allowing you to chain operations in a fluent style.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+val user = User("John", "Doe").also {
+    println("User created: ${it.firstName} ${it.lastName}")
+    it.isActive = true
+}
+</code>
+</pre>

@@ -6,12 +6,28 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Aug 2025 07:22:38 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 16 Aug 2025 07:20:35 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'also' Scope Function for Side Effects</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250816072035.html</link>
+      <description>&lt;h2&gt;Using the 'also' Scope Function for Side Effects&lt;/h2&gt;
+&lt;p&gt;The 'also' scope function is a great way to perform side effects on an object while returning the object itself. This can be particularly useful when you want to perform operations, such as logging or modifying properties, without changing the original object. It enhances code readability by allowing you to chain operations in a fluent style.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+val user = User("John", "Doe").also {
+    println("User created: ${it.firstName} ${it.lastName}")
+    it.isActive = true
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 16 Aug 2025 07:20:35 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250816072035.html</guid>
+      </item>
     <item>
       <title>Using Type Aliases for Improved Code Readability</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250815072238.html</link>
