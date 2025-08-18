@@ -6,12 +6,35 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Aug 2025 07:20:49 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 Aug 2025 07:26:16 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Higher-Order Functions for Enhanced Code Reusability</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250818072616.html</link>
+      <description>&lt;h2&gt;Using Higher-Order Functions for Enhanced Code Reusability&lt;/h2&gt;
+&lt;p&gt;Higher-order functions are a powerful feature in Kotlin that allow you to pass functions as parameters, return them, or both. This capability enables you to create more reusable and modular code. By defining functions that operate on other functions, you can abstract common behavior and avoid code duplication. For instance, you can create a generic function to apply any operation on a list of integers, providing great flexibility.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+fun List&lt;Int&gt;.applyOperation(operation: (Int) -&gt; Int): List&lt;Int&gt; {
+    return this.map(operation)
+}
+
+fun main() {
+    val numbers = listOf(1, 2, 3, 4, 5)
+
+    val doubled = numbers.applyOperation { it * 2 }
+    val squared = numbers.applyOperation { it * it }
+
+    println("Doubled: $doubled") // Output: Doubled: [2, 4, 6, 8, 10]
+    println("Squared: $squared") // Output: Squared: [1, 4, 9, 16, 25]
+}
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 18 Aug 2025 07:26:16 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250818072616.html</guid>
+      </item>
     <item>
       <title>Using the 'repeat' Function for Looping with Clarity</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250817072049.html</link>

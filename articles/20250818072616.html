@@ -1,0 +1,17 @@
+<h2>Using Higher-Order Functions for Enhanced Code Reusability</h2>
+<p>Higher-order functions are a powerful feature in Kotlin that allow you to pass functions as parameters, return them, or both. This capability enables you to create more reusable and modular code. By defining functions that operate on other functions, you can abstract common behavior and avoid code duplication. For instance, you can create a generic function to apply any operation on a list of integers, providing great flexibility.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+fun List<Int>.applyOperation(operation: (Int) -> Int): List<Int> {
+    return this.map(operation)
+}
+
+fun main() {
+    val numbers = listOf(1, 2, 3, 4, 5)
+
+    val doubled = numbers.applyOperation { it * 2 }
+    val squared = numbers.applyOperation { it * it }
+
+    println("Doubled: $doubled") // Output: Doubled: [2, 4, 6, 8, 10]
+    println("Squared: $squared") // Output: Squared: [1, 4, 9, 16, 25]
+}
+</pre>
