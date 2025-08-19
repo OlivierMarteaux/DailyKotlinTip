@@ -1,0 +1,7 @@
+<h2>Using the 'takeUnless' Function for Inverse Conditional Assignment</h2>
+<p>The 'takeUnless' function in Kotlin provides a convenient way to assign a value based on an inverse condition. It returns the value if the given condition is false, making it useful for scenarios where you want to handle cases that do not meet certain criteria. This can lead to cleaner and more readable code by reducing the need for explicit if-else statements.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val number: Int? = null
+val result = number.takeUnless { it == null } ?: "No number provided"
+println(result) // Output: No number provided
+</pre>

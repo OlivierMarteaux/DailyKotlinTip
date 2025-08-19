@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Aug 2025 07:26:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 19 Aug 2025 07:21:35 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeUnless' Function for Inverse Conditional Assignment</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250819072135.html</link>
+      <description>&lt;h2&gt;Using the 'takeUnless' Function for Inverse Conditional Assignment&lt;/h2&gt;
+&lt;p&gt;The 'takeUnless' function in Kotlin provides a convenient way to assign a value based on an inverse condition. It returns the value if the given condition is false, making it useful for scenarios where you want to handle cases that do not meet certain criteria. This can lead to cleaner and more readable code by reducing the need for explicit if-else statements.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val number: Int? = null
+val result = number.takeUnless { it == null } ?: "No number provided"
+println(result) // Output: No number provided
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 19 Aug 2025 07:21:35 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250819072135.html</guid>
+      </item>
     <item>
       <title>Using Higher-Order Functions for Enhanced Code Reusability</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250818072616.html</link>
