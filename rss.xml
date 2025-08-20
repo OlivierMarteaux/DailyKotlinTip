@@ -6,12 +6,31 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Aug 2025 07:21:35 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 20 Aug 2025 07:22:04 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Data Classes for Immutable Data Structures</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250820072204.html</link>
+      <description>&lt;h2&gt;Using Data Classes for Immutable Data Structures&lt;/h2&gt;
+&lt;p&gt;Data classes in Kotlin are a concise way to create classes that primarily hold data. They automatically provide useful methods like &lt;code&gt;toString()&lt;/code&gt;, &lt;code&gt;equals()&lt;/code&gt;, &lt;code&gt;hashCode()&lt;/code&gt;, and &lt;code&gt;copy()&lt;/code&gt;, making them ideal for representing simple data structures. This promotes immutability, which is a recommended practice in functional programming, enhancing the reliability of your code.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+data class User(val id: Int, val name: String, val email: String)
+
+fun main() {
+    val user1 = User(1, "John Doe", "john@example.com")
+    val user2 = user1.copy(name = "Jane Doe")
+
+    println(user1) // Output: User(id=1, name=John Doe, email=john@example.com)
+    println(user2) // Output: User(id=1, name=Jane Doe, email=john@example.com)
+}
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 20 Aug 2025 07:22:04 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250820072204.html</guid>
+      </item>
     <item>
       <title>Using the 'takeUnless' Function for Inverse Conditional Assignment</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250819072135.html</link>

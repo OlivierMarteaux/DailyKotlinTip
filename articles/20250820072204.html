@@ -1,0 +1,13 @@
+<h2>Using Data Classes for Immutable Data Structures</h2>
+<p>Data classes in Kotlin are a concise way to create classes that primarily hold data. They automatically provide useful methods like <code>toString()</code>, <code>equals()</code>, <code>hashCode()</code>, and <code>copy()</code>, making them ideal for representing simple data structures. This promotes immutability, which is a recommended practice in functional programming, enhancing the reliability of your code.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+data class User(val id: Int, val name: String, val email: String)
+
+fun main() {
+    val user1 = User(1, "John Doe", "john@example.com")
+    val user2 = user1.copy(name = "Jane Doe")
+
+    println(user1) // Output: User(id=1, name=John Doe, email=john@example.com)
+    println(user2) // Output: User(id=1, name=Jane Doe, email=john@example.com)
+}
+</pre>
