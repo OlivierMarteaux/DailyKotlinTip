@@ -1,0 +1,16 @@
+<h2>Using Delegated Properties for Cleaner Property Management</h2>
+<p>Delegated properties in Kotlin allow you to delegate the responsibility of getting and setting a property to another object. This feature can help you manage property behavior more cleanly and concisely, especially when dealing with common patterns like lazy initialization, observable properties, or storing properties in a map. By using delegated properties, you can reduce boilerplate code and improve readability.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+class User {
+    var name: String by lazy { "Default Name" }
+    var age: Int by Delegates.observable(0) { _, old, new ->
+        println("Age changed from $old to $new")
+    }
+}
+
+fun main() {
+    val user = User()
+    println(user.name) // Output: Default Name
+    user.age = 25 // Output: Age changed from 0 to 25
+}
+</pre>

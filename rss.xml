@@ -6,12 +6,34 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Aug 2025 07:22:04 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 21 Aug 2025 07:24:00 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Delegated Properties for Cleaner Property Management</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250821072400.html</link>
+      <description>&lt;h2&gt;Using Delegated Properties for Cleaner Property Management&lt;/h2&gt;
+&lt;p&gt;Delegated properties in Kotlin allow you to delegate the responsibility of getting and setting a property to another object. This feature can help you manage property behavior more cleanly and concisely, especially when dealing with common patterns like lazy initialization, observable properties, or storing properties in a map. By using delegated properties, you can reduce boilerplate code and improve readability.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+class User {
+    var name: String by lazy { "Default Name" }
+    var age: Int by Delegates.observable(0) { _, old, new -&gt;
+        println("Age changed from $old to $new")
+    }
+}
+
+fun main() {
+    val user = User()
+    println(user.name) // Output: Default Name
+    user.age = 25 // Output: Age changed from 0 to 25
+}
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 21 Aug 2025 07:24:00 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250821072400.html</guid>
+      </item>
     <item>
       <title>Using Data Classes for Immutable Data Structures</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250820072204.html</link>
