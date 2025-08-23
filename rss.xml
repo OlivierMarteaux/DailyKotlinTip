@@ -6,12 +6,35 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Aug 2025 07:20:57 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 23 Aug 2025 07:19:25 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'apply' Scope Function for Object Configuration</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250823071925.html</link>
+      <description>&lt;h2&gt;Using the 'apply' Scope Function for Object Configuration&lt;/h2&gt;
+&lt;p&gt;The 'apply' scope function is a powerful tool in Kotlin that allows you to configure an object in a concise manner. When you use 'apply', you can access the instance of the object directly within its block and make multiple property assignments or method calls without repeating the object reference. This can help improve code readability and reduce boilerplate code, making your object initialization cleaner.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+data class User(var name: String = "", var age: Int = 0)
+
+fun createUser(): User {
+    return User().apply {
+        name = "John Doe"
+        age = 30
+    }
+}
+
+fun main() {
+    val user = createUser()
+    println(user) // Output: User(name=John Doe, age=30)
+}
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 23 Aug 2025 07:19:25 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250823071925.html</guid>
+      </item>
     <item>
       <title>Using Extension Functions for Enhanced Functionality</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250822072057.html</link>
