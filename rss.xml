@@ -6,12 +6,29 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Aug 2025 07:19:25 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 24 Aug 2025 07:20:06 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Null Safety and Scoping</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250824072006.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Null Safety and Scoping&lt;/h2&gt;
+&lt;p&gt;The 'let' function in Kotlin is a powerful tool that allows you to execute a block of code only if the object is not null. This aids in handling nullable types gracefully and reduces the risk of null pointer exceptions. Additionally, it provides a scoped context for the object, making the code cleaner and easier to read.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val name: String? = "Kotlin"
+
+name?.let { nonNullName -&gt;
+    println("The name is $nonNullName")
+} ?: run {
+    println("Name is null")
+}
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 24 Aug 2025 07:20:06 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250824072006.html</guid>
+      </item>
     <item>
       <title>Using the 'apply' Scope Function for Object Configuration</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250823071925.html</link>
