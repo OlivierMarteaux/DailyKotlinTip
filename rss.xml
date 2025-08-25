@@ -6,12 +6,28 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Aug 2025 07:20:06 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 Aug 2025 07:23:04 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function to Chain Operations</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250825072304.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function to Chain Operations&lt;/h2&gt;
+&lt;p&gt;The 'let' function in Kotlin can be utilized not only for null safety but also for chaining multiple operations on an object. This can lead to more concise and readable code. By using 'let', you can avoid intermediate variables and make your intentions clearer.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val user: User? = getUser()
+user?.let {
+    it.updateProfile()
+    it.sendNotification()
+    it.logActivity()
+}
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 25 Aug 2025 07:23:04 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250825072304.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function for Null Safety and Scoping</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250824072006.html</link>
