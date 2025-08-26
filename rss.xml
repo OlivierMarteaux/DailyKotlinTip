@@ -6,12 +6,31 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Aug 2025 07:23:04 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 Aug 2025 07:21:56 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'lazy' Delegate for Lazy Initialization</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250826072156.html</link>
+      <description>&lt;h2&gt;Using the 'lazy' Delegate for Lazy Initialization&lt;/h2&gt;
+&lt;p&gt;The 'lazy' delegate in Kotlin allows for lazy initialization of properties, meaning that the property is only computed when it is accessed for the first time. This can improve performance by avoiding unnecessary computations and can also help in managing resources efficiently. The 'lazy' delegate is thread-safe by default, making it a great choice for properties that may be accessed from multiple threads.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val lazyValue: String by lazy {
+    println("Computed!")
+    "Hello, World!"
+}
+
+fun main() {
+    println(lazyValue) // Computed! Hello, World!
+    println(lazyValue) // Hello, World! (computed value is reused)
+}
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 26 Aug 2025 07:21:56 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250826072156.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function to Chain Operations</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250825072304.html</link>
