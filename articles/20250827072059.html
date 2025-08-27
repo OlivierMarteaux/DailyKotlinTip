@@ -1,0 +1,22 @@
+<h2>Using Sealed Classes for Restricted Class Hierarchies</h2>
+<p>Sealed classes are a powerful feature in Kotlin that allow you to define a restricted class hierarchy. This means that you can create a class that can have a limited number of subtypes, making it easier to represent a fixed set of types. Sealed classes help in ensuring type safety and improve code readability, especially when used with 'when' expressions. They are particularly useful in scenarios where you want to represent different states or outcomes, such as in a network response handling.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+sealed class Result<out T> {
+    data class Success<out T>(val data: T) : Result<T>()
+    data class Error(val exception: Exception) : Result<Nothing>()
+    object Loading : Result<Nothing>()
+}
+
+fun fetchData(): Result<String> {
+    // Simulating a network call
+    return Result.Success("Data fetched successfully")
+}
+
+fun handleResult(result: Result<String>) {
+    when (result) {
+        is Result.Success -> println(result.data)
+        is Result.Error -> println("Error: ${result.exception.message}")
+        Result.Loading -> println("Loading...")
+    }
+}
+</pre>

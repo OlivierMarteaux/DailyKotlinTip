@@ -6,12 +6,40 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Aug 2025 07:21:56 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 Aug 2025 07:20:59 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using Sealed Classes for Restricted Class Hierarchies</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250827072059.html</link>
+      <description>&lt;h2&gt;Using Sealed Classes for Restricted Class Hierarchies&lt;/h2&gt;
+&lt;p&gt;Sealed classes are a powerful feature in Kotlin that allow you to define a restricted class hierarchy. This means that you can create a class that can have a limited number of subtypes, making it easier to represent a fixed set of types. Sealed classes help in ensuring type safety and improve code readability, especially when used with 'when' expressions. They are particularly useful in scenarios where you want to represent different states or outcomes, such as in a network response handling.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+sealed class Result&lt;out T&gt; {
+    data class Success&lt;out T&gt;(val data: T) : Result&lt;T&gt;()
+    data class Error(val exception: Exception) : Result&lt;Nothing&gt;()
+    object Loading : Result&lt;Nothing&gt;()
+}
+
+fun fetchData(): Result&lt;String&gt; {
+    // Simulating a network call
+    return Result.Success("Data fetched successfully")
+}
+
+fun handleResult(result: Result&lt;String&gt;) {
+    when (result) {
+        is Result.Success -&gt; println(result.data)
+        is Result.Error -&gt; println("Error: ${result.exception.message}")
+        Result.Loading -&gt; println("Loading...")
+    }
+}
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 27 Aug 2025 07:20:59 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250827072059.html</guid>
+      </item>
     <item>
       <title>Using the 'lazy' Delegate for Lazy Initialization</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250826072156.html</link>
