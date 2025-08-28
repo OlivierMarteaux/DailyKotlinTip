@@ -1,0 +1,28 @@
+<h2>Using Flow for Reactive Programming</h2>
+<p>Flow is a powerful asynchronous data stream in Kotlin that allows you to handle a sequence of values over time. It’s a part of Kotlin's Coroutines library and is designed to be cold, meaning it won’t start emitting values until it is collected. This makes it an excellent choice for handling events in a reactive programming style, such as UI updates based on data changes.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+
+// A simple Flow that emits a sequence of integers
+fun numberFlow(): Flow<Int> = flow {
+    for (i in 1..5) {
+        // Emit the current number
+        emit(i)
+        // Simulate some delay
+        kotlinx.coroutines.delay(1000)
+    }
+}
+
+// Collecting the flow in a coroutine
+fun main() = runBlocking {
+    launch {
+        numberFlow().collect { value ->
+            println("Received: $value")
+        }
+    }
+}
+</pre>
