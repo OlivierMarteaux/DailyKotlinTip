@@ -1,0 +1,19 @@
+<h2>Using the 'run' Scope Function for Contextual Operations</h2>
+<p>The 'run' scope function allows you to execute a block of code within the context of an object, returning the result of the block. This is particularly useful for initialization and configuration tasks where you want to perform multiple operations on an object without repeating its name. It's a great way to keep your code concise and readable.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+data class User(var name: String, var age: Int)
+
+fun createUser(): User {
+    return User("John", 25).apply {
+        age += 1 // Increment age
+        name = "John Doe" // Update name
+    }
+}
+
+fun main() {
+    val user = createUser().run {
+        "User: $name, Age: $age"
+    }
+    println(user) // Output: User: John Doe, Age: 26
+}
+</pre>
