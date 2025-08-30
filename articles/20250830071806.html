@@ -1,0 +1,18 @@
+<h2>Using the 'when' Expression for More Readable Conditional Logic</h2>
+<p>The 'when' expression in Kotlin is a powerful and expressive way to handle conditional logic, making your code cleaner and more readable compared to traditional 'if-else' statements. It allows for multiple conditions to be checked in a concise manner while providing a clear structure for handling different cases.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+code
+val dayOfWeek = 3
+val dayName = when (dayOfWeek) {
+    1 -> "Monday"
+    2 -> "Tuesday"
+    3 -> "Wednesday"
+    4 -> "Thursday"
+    5 -> "Friday"
+    6 -> "Saturday"
+    7 -> "Sunday"
+    else -> "Invalid day"
+}
+
+println(dayName) // Output: Wednesday
+</pre>

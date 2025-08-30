@@ -6,12 +6,36 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Aug 2025 07:20:57 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 30 Aug 2025 07:18:06 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'when' Expression for More Readable Conditional Logic</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250830071806.html</link>
+      <description>&lt;h2&gt;Using the 'when' Expression for More Readable Conditional Logic&lt;/h2&gt;
+&lt;p&gt;The 'when' expression in Kotlin is a powerful and expressive way to handle conditional logic, making your code cleaner and more readable compared to traditional 'if-else' statements. It allows for multiple conditions to be checked in a concise manner while providing a clear structure for handling different cases.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+code
+val dayOfWeek = 3
+val dayName = when (dayOfWeek) {
+    1 -&gt; "Monday"
+    2 -&gt; "Tuesday"
+    3 -&gt; "Wednesday"
+    4 -&gt; "Thursday"
+    5 -&gt; "Friday"
+    6 -&gt; "Saturday"
+    7 -&gt; "Sunday"
+    else -&gt; "Invalid day"
+}
+
+println(dayName) // Output: Wednesday
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 30 Aug 2025 07:18:06 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250830071806.html</guid>
+      </item>
     <item>
       <title>Using the 'run' Scope Function for Contextual Operations</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250829072057.html</link>
