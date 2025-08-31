@@ -1,0 +1,17 @@
+<h2>Using the 'with' Scope Function for Cleaner Code</h2>
+<p>The 'with' scope function allows you to operate on an object without having to repeat its name. This is particularly useful when you need to perform multiple operations on the same object, enhancing code readability and reducing repetition. It takes an object as a receiver and allows you to call its methods and properties directly.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+data class User(var name: String, var age: Int)
+
+fun printUserInfo(user: User) {
+    with(user) {
+        println("Name: $name")
+        println("Age: $age")
+    }
+}
+
+fun main() {
+    val user = User("Alice", 30)
+    printUserInfo(user)
+}
+</pre>
