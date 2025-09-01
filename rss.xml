@@ -6,12 +6,26 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Aug 2025 07:19:02 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Sep 2025 07:22:56 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'take' Function for Subsetting Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250901072256.html</link>
+      <description>&lt;h2&gt;Using the 'take' Function for Subsetting Collections&lt;/h2&gt;
+&lt;p&gt;The 'take' function in Kotlin allows you to retrieve the first 'n' elements of a collection, making it easier to work with a subset of data. This can be particularly useful when you want to display a limited number of items in a list or when you need to process only a portion of a larger dataset. For example, if you're implementing pagination or limiting the display of search results, 'take' can help simplify your logic.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val firstThree = numbers.take(3)
+
+println(firstThree) // Output: [1, 2, 3]
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 01 Sep 2025 07:22:56 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250901072256.html</guid>
+      </item>
     <item>
       <title>Using the 'with' Scope Function for Cleaner Code</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250831071902.html</link>
