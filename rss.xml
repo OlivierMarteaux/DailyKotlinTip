@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Sep 2025 07:22:56 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 02 Sep 2025 07:21:39 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeWhile' Function for Conditional Collection Filtering</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250902072139.html</link>
+      <description>&lt;h2&gt;Using the 'takeWhile' Function for Conditional Collection Filtering&lt;/h2&gt;
+&lt;p&gt;The 'takeWhile' function is a powerful tool to filter a collection based on a specified condition. It allows you to retrieve elements from the start of the collection until the given predicate returns false. This can be particularly useful when you want to process a sequence of items until a certain condition is met, making your code cleaner and more expressive.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7)
+val takenNumbers = numbers.takeWhile { it &lt; 5 }
+// takenNumbers will contain [1, 2, 3, 4]
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 02 Sep 2025 07:21:39 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250902072139.html</guid>
+      </item>
     <item>
       <title>Using the 'take' Function for Subsetting Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250901072256.html</link>
