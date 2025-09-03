@@ -1,0 +1,9 @@
+<h2>Using the 'takeLast' Function for Tail Collection Filtering</h2>
+<p>The 'takeLast' function in Kotlin is a useful tool when you need to retrieve the last N elements from a collection. This can be particularly beneficial when you want to analyze or display the most recent items in a dataset, such as the last few messages in a chat application or the latest transactions in a financial app. By using 'takeLast', you can keep your code concise and improve readability.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+val messages = listOf("Hello", "How are you?", "What's up?", "See you soon!", "Goodbye")
+val recentMessages = messages.takeLast(3) // Gets the last 3 messages
+println(recentMessages) // Output: [What's up?, See you soon!, Goodbye]
+</code>
+</pre>
