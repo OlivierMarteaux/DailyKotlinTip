@@ -1,0 +1,15 @@
+<h2>Using the 'mapNotNull' Function for Transforming Collections with Null Filtering</h2>
+<p>The 'mapNotNull' function is a powerful tool in Kotlin that allows you to transform a collection while simultaneously filtering out any null results. This is particularly useful when dealing with collections that may contain null elements, ensuring that your resulting collection only contains valid, non-null values. By using this function, you can achieve cleaner and more concise code without having to explicitly check for nulls.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+data class User(val id: Int, val name: String?)
+
+fun main() {
+    val users = listOf(User(1, "Alice"), User(2, null), User(3, "Bob"))
+
+    val userNames = users.mapNotNull { it.name }
+
+    println(userNames) // Output: [Alice, Bob]
+}
+</code>
+</pre>
