@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Sep 2025 07:20:11 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Sep 2025 07:20:34 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeWhile' Function for Early Termination in Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250905072034.html</link>
+      <description>&lt;h2&gt;Using the 'takeWhile' Function for Early Termination in Collections&lt;/h2&gt;
+&lt;p&gt;The 'takeWhile' function is a powerful tool for iterating through collections and collecting elements until a specified condition is no longer met. This function is particularly useful when you want to process a list of items and stop as soon as a certain criterion fails. It enhances code readability and performance by avoiding unnecessary iterations over the remaining elements.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+code val numbers = listOf(1, 2, 3, 4, 5, 6)
+
+val takenNumbers = numbers.takeWhile { it &lt; 4 }
+
+println(takenNumbers) // Output: [1, 2, 3]
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 05 Sep 2025 07:20:34 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250905072034.html</guid>
+      </item>
     <item>
       <title>Using the 'mapNotNull' Function for Transforming Collections with Null Filtering</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250904072011.html</link>
