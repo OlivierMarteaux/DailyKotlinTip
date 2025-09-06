@@ -1,0 +1,14 @@
+<h2>Using the 'let' Function for Resource Management</h2>
+<p>The 'let' function can be particularly useful for managing resources, such as closing streams or files, in Kotlin. By using 'let', you can ensure that resources are properly handled in a concise way while maintaining readability. This is especially important in scenarios where you want to perform operations on a resource and ensure it gets released afterward.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+code class FileReaderExample {
+    fun readFile(filePath: String) {
+        File(filePath).inputStream().use { inputStream ->
+            inputStream.bufferedReader().use { reader ->
+                val content = reader.readText()
+                println(content)
+            }
+        }
+    }
+}
+</pre>
