@@ -6,12 +6,30 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Sep 2025 07:17:56 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Sep 2025 07:18:21 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'also' Scope Function for Side Effects</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250907071821.html</link>
+      <description>&lt;h2&gt;Using the 'also' Scope Function for Side Effects&lt;/h2&gt;
+&lt;p&gt;The 'also' scope function in Kotlin is useful for performing side effects while allowing the object to be returned unchanged. This is particularly handy for logging, debugging, or chaining operations without modifying the original object. It takes the object as a receiver and allows you to perform operations on it within the block.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+val numberList = mutableListOf(1, 2, 3, 4, 5)
+numberList.also { 
+    println("Original list: $it") 
+}.add(6)
+
+println("Updated list: $numberList")
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 07 Sep 2025 07:18:21 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250907071821.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function for Resource Management</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250906071756.html</link>
