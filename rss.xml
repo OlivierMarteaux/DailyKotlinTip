@@ -6,12 +6,33 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Sep 2025 07:21:01 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Sep 2025 07:20:46 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Chaining Multiple Operations</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250910072046.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Chaining Multiple Operations&lt;/h2&gt;
+&lt;p&gt;The 'let' function in Kotlin can be particularly useful for chaining multiple operations on an object while maintaining null safety. By using 'let', you can perform several transformations or actions on the object, avoiding the need for explicit null checks and making your code cleaner and more readable.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val user: User? = getUser()
+
+user?.let { 
+    // Transform user data
+    val userName = it.name.toUpperCase()
+    val userEmail = it.email.lowercase()
+
+    // Log user information
+    println("User Name: $userName")
+    println("User Email: $userEmail")
+}
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 10 Sep 2025 07:20:46 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250910072046.html</guid>
+      </item>
     <item>
       <title>Using the 'filterIsInstance' Function for Type-Safe Filtering</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250909072101.html</link>
