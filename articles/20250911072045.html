@@ -1,0 +1,20 @@
+<h2>Using the 'groupBy' Function for Collection Grouping</h2>
+<p>The 'groupBy' function in Kotlin is a powerful tool for organizing collections. It allows you to group elements based on a specified criterion, returning a map where the keys are the criteria and the values are lists of corresponding elements. This is particularly useful in scenarios where you need to categorize data, such as grouping users by their roles or products by their categories.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val users = listOf(
+    User("Alice", "Admin"),
+    User("Bob", "User"),
+    User("Charlie", "Admin"),
+    User("David", "User")
+)
+
+val groupedUsers = users.groupBy { it.role }
+
+groupedUsers.forEach { (role, users) ->
+    println("$role: ${users.joinToString { it.name }}")
+}
+
+// Output:
+// Admin: Alice, Charlie
+// User: Bob, David
+</pre>

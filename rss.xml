@@ -6,12 +6,38 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Sep 2025 07:20:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Sep 2025 07:20:45 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'groupBy' Function for Collection Grouping</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250911072045.html</link>
+      <description>&lt;h2&gt;Using the 'groupBy' Function for Collection Grouping&lt;/h2&gt;
+&lt;p&gt;The 'groupBy' function in Kotlin is a powerful tool for organizing collections. It allows you to group elements based on a specified criterion, returning a map where the keys are the criteria and the values are lists of corresponding elements. This is particularly useful in scenarios where you need to categorize data, such as grouping users by their roles or products by their categories.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val users = listOf(
+    User("Alice", "Admin"),
+    User("Bob", "User"),
+    User("Charlie", "Admin"),
+    User("David", "User")
+)
+
+val groupedUsers = users.groupBy { it.role }
+
+groupedUsers.forEach { (role, users) -&gt;
+    println("$role: ${users.joinToString { it.name }}")
+}
+
+// Output:
+// Admin: Alice, Charlie
+// User: Bob, David
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 11 Sep 2025 07:20:45 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250911072045.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function for Chaining Multiple Operations</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250910072046.html</link>
