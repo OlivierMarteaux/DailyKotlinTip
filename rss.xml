@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Sep 2025 07:20:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Sep 2025 07:19:48 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeUnless' Function for Conditional Collection Filtering</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250912071948.html</link>
+      <description>&lt;h2&gt;Using the 'takeUnless' Function for Conditional Collection Filtering&lt;/h2&gt;
+&lt;p&gt;The 'takeUnless' function is a useful Kotlin extension that allows you to take elements from a collection unless a specified condition is true. This can help you simplify your code by reducing the need for explicit `if` checks and making your intentions clear. It works well when you want to filter elements based on a negated condition.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6)
+val filteredNumbers = numbers.takeUnless { it.size &lt; 4 }
+println(filteredNumbers) // Output: [1, 2, 3, 4, 5, 6]
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 12 Sep 2025 07:19:48 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250912071948.html</guid>
+      </item>
     <item>
       <title>Using the 'groupBy' Function for Collection Grouping</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250911072045.html</link>
