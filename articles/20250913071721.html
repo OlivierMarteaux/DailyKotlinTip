@@ -1,0 +1,12 @@
+<h2>Using the 'apply' Scope Function for Object Configuration</h2>
+<p>The 'apply' scope function in Kotlin is a powerful tool for configuring objects. It allows you to initialize or modify an object in a more concise and readable manner. Within the 'apply' block, the object itself is referenced as 'this', allowing you to access its properties and methods directly without needing to repeat the object name. This is particularly useful for setting up complex objects such as UI components or data classes.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+data class User(var name: String, var age: Int)
+
+val user = User("John", 25).apply {
+    name = "Jane"
+    age = 30
+}
+
+println(user) // Output: User(name=Jane, age=30)
+</pre>
