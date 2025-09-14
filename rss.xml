@@ -6,12 +6,28 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Sep 2025 07:17:21 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Sep 2025 07:18:23 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Nullable Type Handling</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250914071823.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Nullable Type Handling&lt;/h2&gt;
+&lt;p&gt;The 'let' function is particularly useful when dealing with nullable types in Kotlin. It allows you to execute a block of code only if the value is not null. This can help avoid null pointer exceptions and make your code cleaner and more concise. By using 'let', you can safely operate on the nullable object and provide an alternative action if it is null.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val name: String? = "Kotlin"
+name?.let { 
+    println("Hello, $it!") 
+} ?: run { 
+    println("Name is null") 
+}
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 14 Sep 2025 07:18:23 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250914071823.html</guid>
+      </item>
     <item>
       <title>Using the 'apply' Scope Function for Object Configuration</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250913071721.html</link>
