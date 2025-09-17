@@ -6,12 +6,36 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Sep 2025 07:21:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Sep 2025 07:20:10 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'distinctBy' Function for Unique Collection Filtering</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250917072010.html</link>
+      <description>&lt;h2&gt;Using the 'distinctBy' Function for Unique Collection Filtering&lt;/h2&gt;
+&lt;p&gt;
+The 'distinctBy' function in Kotlin allows you to filter a collection, retaining only distinct elements based on a given selector function. This is particularly useful when you want to eliminate duplicates based on specific properties of the objects in the collection. For example, if you have a list of users with potentially duplicate entries based on their email addresses, you can easily retrieve a list of unique users by their email.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val users = listOf(
+    User("Alice", "alice@example.com"),
+    User("Bob", "bob@example.com"),
+    User("Alice", "alice@example.com"),
+    User("Charlie", "charlie@example.com")
+)
+
+val uniqueUsers = users.distinctBy { it.email }
+
+uniqueUsers.forEach { user -&gt; 
+    println(user.name) 
+}
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 17 Sep 2025 07:20:10 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250917072010.html</guid>
+      </item>
     <item>
       <title>Using the 'flatMap' Function for Flattening Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250916072113.html</link>
