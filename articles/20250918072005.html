@@ -1,0 +1,15 @@
+<h2>Using the 'associateBy' Function for Creating Maps from Collections</h2>
+<p>The 'associateBy' function in Kotlin allows you to transform a collection into a map, where each element is associated with a key derived from its properties. This is particularly useful when you want to quickly look up elements based on a unique identifier. By specifying a key selector function, you can create a map where the keys are the unique identifiers, and the values are the original objects.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val users = listOf(
+    User(1, "Alice"),
+    User(2, "Bob"),
+    User(3, "Charlie")
+)
+
+// Create a map of users indexed by their IDs
+val userMap = users.associateBy { it.id }
+
+// Accessing a user by ID
+val user = userMap[1] // Returns User(1, "Alice")
+</pre>

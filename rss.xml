@@ -6,12 +6,33 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Sep 2025 07:20:10 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 18 Sep 2025 07:20:05 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'associateBy' Function for Creating Maps from Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250918072005.html</link>
+      <description>&lt;h2&gt;Using the 'associateBy' Function for Creating Maps from Collections&lt;/h2&gt;
+&lt;p&gt;The 'associateBy' function in Kotlin allows you to transform a collection into a map, where each element is associated with a key derived from its properties. This is particularly useful when you want to quickly look up elements based on a unique identifier. By specifying a key selector function, you can create a map where the keys are the unique identifiers, and the values are the original objects.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val users = listOf(
+    User(1, "Alice"),
+    User(2, "Bob"),
+    User(3, "Charlie")
+)
+
+// Create a map of users indexed by their IDs
+val userMap = users.associateBy { it.id }
+
+// Accessing a user by ID
+val user = userMap[1] // Returns User(1, "Alice")
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 18 Sep 2025 07:20:05 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250918072005.html</guid>
+      </item>
     <item>
       <title>Using the 'distinctBy' Function for Unique Collection Filtering</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250917072010.html</link>
