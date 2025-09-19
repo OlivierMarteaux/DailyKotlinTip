@@ -1,0 +1,11 @@
+<h2>Using the 'run' Scope Function for Contextual Execution</h2>
+<p>The 'run' function in Kotlin is a scope function that allows you to execute a block of code within the context of an object. It is useful for performing operations on an object and returning a result without the need for an explicit reference to the object. This can lead to cleaner and more concise code, especially when initializing or configuring objects.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val user = User().run {
+    name = "Alice"
+    age = 30
+    address = "123 Main St"
+    this // returns the User object
+}
+println(user) // User(name=Alice, age=30, address=123 Main St)
+</pre>
