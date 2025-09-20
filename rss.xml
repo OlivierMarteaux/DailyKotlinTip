@@ -6,12 +6,35 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Sep 2025 07:20:37 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Sep 2025 07:18:35 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'runCatching' Function for Safe Execution</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250920071835.html</link>
+      <description>&lt;h2&gt;Using the 'runCatching' Function for Safe Execution&lt;/h2&gt;
+&lt;p&gt;The 'runCatching' function in Kotlin is a powerful utility that allows you to execute a block of code and catch any exceptions that may arise during its execution. This is particularly useful for handling operations that can fail, such as network requests or file operations, without cluttering your code with extensive try-catch blocks. The result of the execution can be easily checked for success or failure, providing a clean and concise way to manage exceptions.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val result = runCatching {
+    // Code that might throw an exception
+    val response = fetchDataFromNetwork()
+    parseResponse(response)
+}
+
+result.onSuccess { data -&gt;
+    // Handle the successful result
+    println("Data received: $data")
+}.onFailure { exception -&gt;
+    // Handle the error
+    println("Error occurred: ${exception.message}")
+}
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 20 Sep 2025 07:18:35 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250920071835.html</guid>
+      </item>
     <item>
       <title>Using the 'run' Scope Function for Contextual Execution</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250919072037.html</link>
