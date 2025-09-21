@@ -6,12 +6,38 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Sep 2025 07:18:35 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Sep 2025 07:17:35 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'with' Scope Function for Contextual Execution</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250921071735.html</link>
+      <description>&lt;h2&gt;Using the 'with' Scope Function for Contextual Execution&lt;/h2&gt;
+&lt;p&gt;The 'with' scope function in Kotlin is a powerful tool that allows you to execute multiple operations on an object without repeating its name. This can lead to cleaner and more readable code, especially when you're working with an object that requires several modifications or property accesses. It is ideal when you want to work with a specific object for a short block of code.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+data class User(var name: String, var age: Int)
+
+fun updateUser(user: User) {
+    with(user) {
+        name = "Alice"
+        age += 1
+    }
+}
+
+fun main() {
+    val user = User("Bob", 25)
+    updateUser(user)
+    println(user) // Output: User(name=Alice, age=26)
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 21 Sep 2025 07:17:35 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250921071735.html</guid>
+      </item>
     <item>
       <title>Using the 'runCatching' Function for Safe Execution</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250920071835.html</link>
