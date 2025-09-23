@@ -6,12 +6,30 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Sep 2025 07:22:48 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Sep 2025 07:21:24 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'zip' Function for Pairing Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250923072124.html</link>
+      <description>&lt;h2&gt;Using the 'zip' Function for Pairing Collections&lt;/h2&gt;
+&lt;p&gt;The 'zip' function in Kotlin allows you to combine two collections into a single collection of pairs. Each pair consists of elements at the same index from the two collections. This is particularly useful when you need to correlate data from two different lists, such as combining a list of names with a list of ages to create a list of people.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val names = listOf("Alice", "Bob", "Charlie")
+val ages = listOf(25, 30, 35)
+
+val paired = names.zip(ages)
+
+paired.forEach { (name, age) -&gt;
+    println("$name is $age years old")
+}
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 23 Sep 2025 07:21:24 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250923072124.html</guid>
+      </item>
     <item>
       <title>Using the 'take' Function for Collection Truncation</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250922072248.html</link>
