@@ -1,0 +1,7 @@
+<h2>Using the 'takeLast' Function for End-Based Collection Truncation</h2>
+<p>The 'takeLast' function is useful when you want to retrieve a specified number of elements from the end of a collection. This is particularly handy in scenarios where you're interested in the most recent entries, like fetching the latest messages in a chat application or the most recent transactions in a financial app.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val messages = listOf("Hello", "How are you?", "I'm fine, thanks!", "What about you?", "See you soon!")
+val lastThreeMessages = messages.takeLast(3)
+println(lastThreeMessages) // Output: [I'm fine, thanks!, What about you?, See you soon!]
+</pre>
