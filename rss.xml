@@ -6,12 +6,31 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Sep 2025 07:21:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 25 Sep 2025 07:22:16 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Chaining Transformations</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250925072216.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Chaining Transformations&lt;/h2&gt;
+&lt;p&gt;The 'let' function in Kotlin is not only useful for handling nullable types, but it also allows for easy chaining of transformations within a single scope. This can enhance code readability by reducing the need for temporary variables and providing a clear context for operations that are dependent on the result of a previous operation.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val userInput: String? = "  Kotlin is awesome!  "
+
+userInput?.let {
+    it.trim()                  // Remove leading and trailing whitespace
+        .toUpperCase()         // Convert to uppercase
+        .split(" ")            // Split into words
+        .filter { it.isNotEmpty() }  // Filter out empty strings
+        .forEach { println(it) }     // Print each word
+}
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 25 Sep 2025 07:22:16 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250925072216.html</guid>
+      </item>
     <item>
       <title>Using the 'takeLast' Function for End-Based Collection Truncation</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250924072154.html</link>

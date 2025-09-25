@@ -1,0 +1,13 @@
+<h2>Using the 'let' Function for Chaining Transformations</h2>
+<p>The 'let' function in Kotlin is not only useful for handling nullable types, but it also allows for easy chaining of transformations within a single scope. This can enhance code readability by reducing the need for temporary variables and providing a clear context for operations that are dependent on the result of a previous operation.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val userInput: String? = "  Kotlin is awesome!  "
+
+userInput?.let {
+    it.trim()                  // Remove leading and trailing whitespace
+        .toUpperCase()         // Convert to uppercase
+        .split(" ")            // Split into words
+        .filter { it.isNotEmpty() }  // Filter out empty strings
+        .forEach { println(it) }     // Print each word
+}
+</pre>
