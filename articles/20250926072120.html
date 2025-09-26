@@ -1,0 +1,7 @@
+<h2>Using the 'takeWhile' Function for Conditional Collection Truncation</h2>
+<p>The 'takeWhile' function is a useful Kotlin standard library function that allows you to take elements from a collection while a specified condition holds true. This is particularly handy when you want to filter a collection based on a certain criterion until the first element that does not satisfy the condition is encountered.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 3, 2, 1)
+val result = numbers.takeWhile { it < 4 }
+// result will be [1, 2, 3]
+</pre>

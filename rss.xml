@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Sep 2025 07:22:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Sep 2025 07:21:20 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeWhile' Function for Conditional Collection Truncation</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250926072120.html</link>
+      <description>&lt;h2&gt;Using the 'takeWhile' Function for Conditional Collection Truncation&lt;/h2&gt;
+&lt;p&gt;The 'takeWhile' function is a useful Kotlin standard library function that allows you to take elements from a collection while a specified condition holds true. This is particularly handy when you want to filter a collection based on a certain criterion until the first element that does not satisfy the condition is encountered.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 3, 2, 1)
+val result = numbers.takeWhile { it &lt; 4 }
+// result will be [1, 2, 3]
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 26 Sep 2025 07:21:20 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250926072120.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function for Chaining Transformations</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250925072216.html</link>
