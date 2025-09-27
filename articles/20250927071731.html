@@ -1,0 +1,9 @@
+<h2>Using the 'onEach' Function for Side Effects in Collections</h2>
+<p>The 'onEach' function is a powerful tool for performing side effects on each element of a collection while maintaining the collection itself. This is particularly useful for logging, debugging, or performing actions that don't alter the collection but need to be executed for every element. It allows for cleaner and more expressive code, especially when dealing with collections in a functional programming style.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 5)
+
+numbers.onEach { number ->
+    println("Processing number: $number")
+}.map { it * 2 } // This will return a new list with values [2, 4, 6, 8, 10]
+</pre>

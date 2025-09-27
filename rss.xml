@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Sep 2025 07:21:20 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Sep 2025 07:17:31 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'onEach' Function for Side Effects in Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250927071731.html</link>
+      <description>&lt;h2&gt;Using the 'onEach' Function for Side Effects in Collections&lt;/h2&gt;
+&lt;p&gt;The 'onEach' function is a powerful tool for performing side effects on each element of a collection while maintaining the collection itself. This is particularly useful for logging, debugging, or performing actions that don't alter the collection but need to be executed for every element. It allows for cleaner and more expressive code, especially when dealing with collections in a functional programming style.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+
+numbers.onEach { number -&gt;
+    println("Processing number: $number")
+}.map { it * 2 } // This will return a new list with values [2, 4, 6, 8, 10]
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 27 Sep 2025 07:17:31 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250927071731.html</guid>
+      </item>
     <item>
       <title>Using the 'takeWhile' Function for Conditional Collection Truncation</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250926072120.html</link>
