@@ -6,12 +6,29 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Sep 2025 07:17:31 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Sep 2025 07:17:45 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'fold' Function for Reducing Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250928071745.html</link>
+      <description>&lt;h2&gt;Using the 'fold' Function for Reducing Collections&lt;/h2&gt;
+&lt;p&gt;The 'fold' function is a powerful tool in Kotlin that allows you to accumulate a value starting from an initial accumulator value and applying a specified operation to each element in the collection. This is particularly useful for scenarios where you need to transform or aggregate a collection into a single result, such as summing numbers, concatenating strings, or even constructing complex objects.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+val sum = numbers.fold(0) { accumulator, element -&gt; accumulator + element }
+println(sum) // Output: 15
+
+val names = listOf("Alice", "Bob", "Charlie")
+val concatenatedNames = names.fold("") { acc, name -&gt; "$acc$name " }
+println(concatenatedNames.trim()) // Output: Alice Bob Charlie
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 28 Sep 2025 07:17:45 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250928071745.html</guid>
+      </item>
     <item>
       <title>Using the 'onEach' Function for Side Effects in Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250927071731.html</link>
