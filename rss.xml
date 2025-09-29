@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Sep 2025 07:17:45 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 29 Sep 2025 07:22:36 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeWhile' Function for Conditional Collection Subsets</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250929072236.html</link>
+      <description>&lt;h2&gt;Using the 'takeWhile' Function for Conditional Collection Subsets&lt;/h2&gt;
+&lt;p&gt;The 'takeWhile' function is a powerful tool in Kotlin that allows you to create a subset of a collection based on a specified condition. It takes elements from the beginning of the collection until the predicate returns false. This is particularly useful when you want to extract a portion of a list that meets certain criteria, such as filtering items until a certain condition is no longer satisfied.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(2, 4, 6, 8, 10, 3, 1)
+val evenNumbers = numbers.takeWhile { it % 2 == 0 }
+println(evenNumbers) // Output: [2, 4, 6, 8, 10]
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 29 Sep 2025 07:22:36 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250929072236.html</guid>
+      </item>
     <item>
       <title>Using the 'fold' Function for Reducing Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20250928071745.html</link>
