@@ -1,0 +1,15 @@
+<h2>Using the 'groupBy' Function for Collection Grouping</h2>
+<p>The 'groupBy' function is a powerful tool in Kotlin that allows you to group elements of a collection based on a specified key. This can be particularly useful when you want to categorize data into different buckets. For instance, if you have a list of users and you want to group them by their age, 'groupBy' will help you create a map where each key is an age and the value is a list of users corresponding to that age.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val users = listOf(
+    User("Alice", 30),
+    User("Bob", 25),
+    User("Charlie", 30),
+    User("David", 25)
+)
+
+val groupedByAge = users.groupBy { it.age }
+
+println(groupedByAge)
+// Output: {30=[User(name=Alice, age=30), User(name=Charlie, age=30)], 25=[User(name=Bob, age=25), User(name=David, age=25)]}
+</pre>
