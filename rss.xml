@@ -6,12 +6,31 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Oct 2025 07:20:40 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Oct 2025 07:18:13 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'also' Scope Function for Side Effects</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251004071813.html</link>
+      <description>&lt;h2&gt;Using the 'also' Scope Function for Side Effects&lt;/h2&gt;
+&lt;p&gt;The 'also' function in Kotlin is a scope function that allows you to perform side effects on an object while returning the original object. This is particularly useful for chaining operations where you want to apply additional actions without altering the object itself.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = mutableListOf(1, 2, 3)
+val result = numbers
+    .also { println("Original list: $it") } // Side effect
+    .map { it * 2 } // Transforming the list
+    .also { println("Transformed list: $it") } // Another side effect
+
+// Output:
+// Original list: [1, 2, 3]
+// Transformed list: [2, 4, 6]
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 04 Oct 2025 07:18:13 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251004071813.html</guid>
+      </item>
     <item>
       <title>Using the 'mapNotNull' Function for Transforming Collections with Filtering</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251003072040.html</link>

@@ -1,0 +1,13 @@
+<h2>Using the 'also' Scope Function for Side Effects</h2>
+<p>The 'also' function in Kotlin is a scope function that allows you to perform side effects on an object while returning the original object. This is particularly useful for chaining operations where you want to apply additional actions without altering the object itself.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = mutableListOf(1, 2, 3)
+val result = numbers
+    .also { println("Original list: $it") } // Side effect
+    .map { it * 2 } // Transforming the list
+    .also { println("Transformed list: $it") } // Another side effect
+
+// Output:
+// Original list: [1, 2, 3]
+// Transformed list: [2, 4, 6]
+</pre>
