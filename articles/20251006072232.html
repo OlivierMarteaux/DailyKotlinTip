@@ -1,0 +1,10 @@
+<h2>Using the 'takeUnless' Function for Conditional Collection Subsetting</h2>
+<p>The 'takeUnless' function in Kotlin is a useful extension function that returns a collection containing the first elements that do not satisfy a specified predicate. This can be incredibly handy when you want to create a subset of a collection based on a condition that you want to avoid. It provides a more readable and expressive way to filter collections by negating a condition.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+// Get numbers that are not greater than 5
+val filteredNumbers = numbers.takeUnless { it > 5 }
+
+println(filteredNumbers) // Output: [1, 2, 3, 4, 5]
+</pre>
