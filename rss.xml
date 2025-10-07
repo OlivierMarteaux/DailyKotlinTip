@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Oct 2025 07:22:32 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Oct 2025 07:21:22 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'flatMap' Function for Flattening Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251007072122.html</link>
+      <description>&lt;h2&gt;Using the 'flatMap' Function for Flattening Collections&lt;/h2&gt;
+&lt;p&gt;The 'flatMap' function in Kotlin is a powerful tool for transforming a collection of collections into a single collection. It applies a transformation function to each element and then flattens the result, making it especially useful when dealing with nested data structures. This can simplify your code and improve readability when working with lists of lists or similar scenarios.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val listOfLists = listOf(listOf(1, 2), listOf(3, 4), listOf(5, 6))
+
+val flattenedList = listOfLists.flatMap { it }
+
+// Result: [1, 2, 3, 4, 5, 6]
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 07 Oct 2025 07:21:22 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251007072122.html</guid>
+      </item>
     <item>
       <title>Using the 'takeUnless' Function for Conditional Collection Subsetting</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251006072232.html</link>
