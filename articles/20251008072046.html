@@ -1,0 +1,7 @@
+<h2>Using the 'associate' Function for Creating Maps from Collections</h2>
+<p>The 'associate' function in Kotlin allows you to transform a collection into a map, where each element of the collection is a key-value pair defined by a provided transformation function. This is particularly useful when you want to create a mapping of objects based on certain properties, such as IDs or names, while ensuring that the resulting map is easy to work with.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val users = listOf("Alice", "Bob", "Charlie")
+val userMap = users.associate { user -> user to user.length }
+// userMap will be: {Alice=5, Bob=3, Charlie=7}
+</pre>

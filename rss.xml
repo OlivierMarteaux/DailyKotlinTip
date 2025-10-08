@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Oct 2025 07:21:22 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Oct 2025 07:20:46 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'associate' Function for Creating Maps from Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251008072046.html</link>
+      <description>&lt;h2&gt;Using the 'associate' Function for Creating Maps from Collections&lt;/h2&gt;
+&lt;p&gt;The 'associate' function in Kotlin allows you to transform a collection into a map, where each element of the collection is a key-value pair defined by a provided transformation function. This is particularly useful when you want to create a mapping of objects based on certain properties, such as IDs or names, while ensuring that the resulting map is easy to work with.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val users = listOf("Alice", "Bob", "Charlie")
+val userMap = users.associate { user -&gt; user to user.length }
+// userMap will be: {Alice=5, Bob=3, Charlie=7}
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 08 Oct 2025 07:20:46 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251008072046.html</guid>
+      </item>
     <item>
       <title>Using the 'flatMap' Function for Flattening Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251007072122.html</link>
