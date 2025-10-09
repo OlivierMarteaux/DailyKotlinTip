@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Oct 2025 07:20:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Oct 2025 07:21:07 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'withIndex' Function for Indexed Iteration</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251009072107.html</link>
+      <description>&lt;h2&gt;Using the 'withIndex' Function for Indexed Iteration&lt;/h2&gt;
+&lt;p&gt;The 'withIndex' function allows you to iterate over a collection while keeping track of the index of each element. This is particularly useful when you need both the element and its position within the collection. It returns a sequence of indexed values that contain both the index and the element, making it easy to use in loops.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val items = listOf("Apple", "Banana", "Cherry")
+
+for ((index, value) in items.withIndex()) {
+    println("Item at index $index is $value")
+}
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 09 Oct 2025 07:21:07 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251009072107.html</guid>
+      </item>
     <item>
       <title>Using the 'associate' Function for Creating Maps from Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251008072046.html</link>

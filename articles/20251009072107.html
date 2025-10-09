@@ -1,0 +1,9 @@
+<h2>Using the 'withIndex' Function for Indexed Iteration</h2>
+<p>The 'withIndex' function allows you to iterate over a collection while keeping track of the index of each element. This is particularly useful when you need both the element and its position within the collection. It returns a sequence of indexed values that contain both the index and the element, making it easy to use in loops.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val items = listOf("Apple", "Banana", "Cherry")
+
+for ((index, value) in items.withIndex()) {
+    println("Item at index $index is $value")
+}
+</pre>
