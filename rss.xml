@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Oct 2025 07:21:07 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Oct 2025 07:21:09 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeWhile' Function for Conditional Collection Truncation</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251010072109.html</link>
+      <description>&lt;h2&gt;Using the 'takeWhile' Function for Conditional Collection Truncation&lt;/h2&gt;
+&lt;p&gt;The 'takeWhile' function is a powerful tool in Kotlin that allows you to collect elements from a collection until a specified condition is no longer met. This is particularly useful when you want to process a stream of data and stop as soon as a certain criterion fails. For example, you might be iterating over a list of numbers and only want to keep the numbers that are less than a specific value.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
+val taken = numbers.takeWhile { it &lt; 5 }
+println(taken)  // Output: [1, 2, 3, 4]
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 10 Oct 2025 07:21:09 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251010072109.html</guid>
+      </item>
     <item>
       <title>Using the 'withIndex' Function for Indexed Iteration</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251009072107.html</link>
