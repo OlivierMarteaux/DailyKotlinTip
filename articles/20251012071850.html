@@ -1,0 +1,11 @@
+<h2>Using the 'runCatching' Function for Safe Exception Handling</h2>
+<p>The 'runCatching' function in Kotlin is a great way to handle exceptions in a more concise and readable manner. It allows you to wrap a block of code that might throw an exception and provides a way to handle the result or the exception without the need for extensive try-catch blocks. This is particularly useful when working with operations that may fail, such as network calls or file operations.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val result = runCatching {
+    // Simulating a risky operation that might throw an exception
+    riskyOperation()
+}.onFailure { exception ->
+    // Handle the exception
+    Log.e("Error", "Operation failed: ${exception.message}")
+}.getOrNull() // Returns the result or null if there was an exception
+</pre>
