@@ -6,12 +6,29 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Oct 2025 07:18:50 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Oct 2025 07:22:41 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Scoping and Safe Calls</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251013072241.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Scoping and Safe Calls&lt;/h2&gt;
+&lt;p&gt;The 'let' function is a powerful scope function in Kotlin that allows you to execute a block of code with the context of an object. It is particularly useful for handling nullable types safely, as it only executes the block if the object is not null. This helps in reducing boilerplate code and makes your code more readable.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val name: String? = "Kotlin"
+
+name?.let {
+    println("The length of the string is ${it.length}")
+} ?: run {
+    println("The string is null")
+}
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 13 Oct 2025 07:22:41 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251013072241.html</guid>
+      </item>
     <item>
       <title>Using the 'runCatching' Function for Safe Exception Handling</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251012071850.html</link>

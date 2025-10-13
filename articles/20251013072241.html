@@ -1,0 +1,11 @@
+<h2>Using the 'let' Function for Scoping and Safe Calls</h2>
+<p>The 'let' function is a powerful scope function in Kotlin that allows you to execute a block of code with the context of an object. It is particularly useful for handling nullable types safely, as it only executes the block if the object is not null. This helps in reducing boilerplate code and makes your code more readable.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val name: String? = "Kotlin"
+
+name?.let {
+    println("The length of the string is ${it.length}")
+} ?: run {
+    println("The string is null")
+}
+</pre>
