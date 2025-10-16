@@ -1,0 +1,7 @@
+<h2>Using the 'takeLast' Function for Retrieving the End of Collections</h2>
+<p>The 'takeLast' function is useful when you want to obtain a specified number of elements from the end of a collection. This can be particularly handy in scenarios where you're interested in the most recent items, such as the latest messages in a chat application or the most recent transactions in a financial app.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val transactions = listOf("Deposit", "Withdrawal", "Transfer", "Deposit", "Withdrawal")
+val recentTransactions = transactions.takeLast(3)
+println(recentTransactions) // Output: [Transfer, Deposit, Withdrawal]
+</pre>
