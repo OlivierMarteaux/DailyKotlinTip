@@ -6,12 +6,49 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Oct 2025 07:22:21 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Oct 2025 07:21:39 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'combine' Function for Merging Flows</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251017072139.html</link>
+      <description>&lt;h2&gt;Using the 'combine' Function for Merging Flows&lt;/h2&gt;
+&lt;p&gt;The 'combine' function in Kotlin allows you to merge multiple flows into a single flow. This is particularly useful in Jetpack Compose when you want to react to changes in multiple data streams simultaneously. By combining flows, you can create a more dynamic UI that updates based on changes in any of the supplied flows.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+import kotlinx.coroutines.flow.*
+
+fun main() = runBlocking {
+    val flow1 = flow {
+        emit("Hello")
+        delay(1000)
+        emit("from")
+        delay(1000)
+        emit("Flow 1")
+    }
+
+    val flow2 = flow {
+        emit("World")
+        delay(500)
+        emit("from")
+        delay(1000)
+        emit("Flow 2")
+    }
+
+    flow1.combine(flow2) { value1, value2 -&gt;
+        "$value1 $value2"
+    }.collect { combinedValue -&gt;
+        println(combinedValue)
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 17 Oct 2025 07:21:39 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251017072139.html</guid>
+      </item>
     <item>
       <title>Using the 'takeLast' Function for Retrieving the End of Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251016072221.html</link>

@@ -1,0 +1,31 @@
+<h2>Using the 'combine' Function for Merging Flows</h2>
+<p>The 'combine' function in Kotlin allows you to merge multiple flows into a single flow. This is particularly useful in Jetpack Compose when you want to react to changes in multiple data streams simultaneously. By combining flows, you can create a more dynamic UI that updates based on changes in any of the supplied flows.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+import kotlinx.coroutines.flow.*
+
+fun main() = runBlocking {
+    val flow1 = flow {
+        emit("Hello")
+        delay(1000)
+        emit("from")
+        delay(1000)
+        emit("Flow 1")
+    }
+
+    val flow2 = flow {
+        emit("World")
+        delay(500)
+        emit("from")
+        delay(1000)
+        emit("Flow 2")
+    }
+
+    flow1.combine(flow2) { value1, value2 ->
+        "$value1 $value2"
+    }.collect { combinedValue ->
+        println(combinedValue)
+    }
+}
+</code>
+</pre>
