@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Oct 2025 07:21:39 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Oct 2025 07:19:01 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'map' Function for Transforming Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251018071901.html</link>
+      <description>&lt;h2&gt;Using the 'map' Function for Transforming Collections&lt;/h2&gt;
+&lt;p&gt;The 'map' function is a powerful tool in Kotlin that allows you to transform each element in a collection into a new form. This is especially useful when you need to apply a function to every item in a list or an array and generate a new list with the results. It enhances code readability and conciseness, making it easier to work with collections.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+val squaredNumbers = numbers.map { it * it }
+println(squaredNumbers) // Output: [1, 4, 9, 16, 25]
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 18 Oct 2025 07:19:01 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251018071901.html</guid>
+      </item>
     <item>
       <title>Using the 'combine' Function for Merging Flows</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251017072139.html</link>
