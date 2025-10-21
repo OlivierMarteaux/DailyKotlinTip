@@ -6,12 +6,32 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Oct 2025 07:22:40 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Oct 2025 07:22:44 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'distinctBy' Function for Unique Elements</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251021072244.html</link>
+      <description>&lt;h2&gt;Using the 'distinctBy' Function for Unique Elements&lt;/h2&gt;
+&lt;p&gt;The 'distinctBy' function is a powerful tool for filtering a collection to contain only unique elements based on a specified selector. This can be particularly useful when you have a collection with duplicate entries, and you want to retain only one instance of each unique item based on a specific property.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val people = listOf(
+    Person("Alice", 30),
+    Person("Bob", 25),
+    Person("Alice", 35),
+    Person("Charlie", 25)
+)
+
+val uniquePeople = people.distinctBy { it.name }
+
+uniquePeople.forEach { println(it) }
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 21 Oct 2025 07:22:44 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251021072244.html</guid>
+      </item>
     <item>
       <title>Using the 'fold' Function for Reducing Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251020072240.html</link>

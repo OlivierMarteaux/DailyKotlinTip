@@ -1,0 +1,14 @@
+<h2>Using the 'distinctBy' Function for Unique Elements</h2>
+<p>The 'distinctBy' function is a powerful tool for filtering a collection to contain only unique elements based on a specified selector. This can be particularly useful when you have a collection with duplicate entries, and you want to retain only one instance of each unique item based on a specific property.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val people = listOf(
+    Person("Alice", 30),
+    Person("Bob", 25),
+    Person("Alice", 35),
+    Person("Charlie", 25)
+)
+
+val uniquePeople = people.distinctBy { it.name }
+
+uniquePeople.forEach { println(it) }
+</pre>
