@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Oct 2025 07:22:44 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Oct 2025 07:22:00 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeWhile' Function for Conditional Collection Truncation</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251022072200.html</link>
+      <description>&lt;h2&gt;Using the 'takeWhile' Function for Conditional Collection Truncation&lt;/h2&gt;
+&lt;p&gt;The 'takeWhile' function allows you to take elements from a collection until a specified condition is no longer met. This is particularly useful when you want to process a collection while certain criteria hold true, such as filtering a list of items based on a specific condition.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val takenNumbers = numbers.takeWhile { it &lt; 5 }
+// takenNumbers will be [1, 2, 3, 4]
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 22 Oct 2025 07:22:00 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251022072200.html</guid>
+      </item>
     <item>
       <title>Using the 'distinctBy' Function for Unique Elements</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251021072244.html</link>

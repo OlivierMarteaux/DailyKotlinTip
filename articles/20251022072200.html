@@ -1,0 +1,9 @@
+<h2>Using the 'takeWhile' Function for Conditional Collection Truncation</h2>
+<p>The 'takeWhile' function allows you to take elements from a collection until a specified condition is no longer met. This is particularly useful when you want to process a collection while certain criteria hold true, such as filtering a list of items based on a specific condition.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val takenNumbers = numbers.takeWhile { it < 5 }
+// takenNumbers will be [1, 2, 3, 4]
+</code>
+</pre>
