@@ -1,0 +1,9 @@
+<h2>Using the 'chunked' Function for Splitting Collections</h2>
+<p>The 'chunked' function in Kotlin allows you to split a collection into smaller lists of a specified size. This can be particularly useful when you want to process items in batches, such as when displaying items in a UI or sending data to a server in smaller parts. It enhances performance and improves readability by managing data in chunks rather than a single large collection.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+val numbers = (1..10).toList()
+val chunkedNumbers = numbers.chunked(3)
+// chunkedNumbers will be [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
+</code>
+</pre>

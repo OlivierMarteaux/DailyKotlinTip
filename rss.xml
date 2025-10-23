@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Oct 2025 07:22:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Oct 2025 07:22:22 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'chunked' Function for Splitting Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251023072222.html</link>
+      <description>&lt;h2&gt;Using the 'chunked' Function for Splitting Collections&lt;/h2&gt;
+&lt;p&gt;The 'chunked' function in Kotlin allows you to split a collection into smaller lists of a specified size. This can be particularly useful when you want to process items in batches, such as when displaying items in a UI or sending data to a server in smaller parts. It enhances performance and improves readability by managing data in chunks rather than a single large collection.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+val numbers = (1..10).toList()
+val chunkedNumbers = numbers.chunked(3)
+// chunkedNumbers will be [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 23 Oct 2025 07:22:22 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251023072222.html</guid>
+      </item>
     <item>
       <title>Using the 'takeWhile' Function for Conditional Collection Truncation</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251022072200.html</link>
