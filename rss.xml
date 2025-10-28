@@ -6,12 +6,29 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Oct 2025 07:22:36 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Oct 2025 07:22:03 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Safe Calls and Chaining Operations</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251028072203.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Safe Calls and Chaining Operations&lt;/h2&gt;
+&lt;p&gt;The 'let' function in Kotlin can be particularly useful for safely operating on nullable types while also enabling method chaining. It allows you to execute a block of code only if a value is non-null, effectively reducing the need for explicit null checks. This can lead to cleaner and more readable code.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val name: String? = "John Doe"
+
+// Using 'let' for safe calls and chaining
+name?.let {
+    println("Name length: ${it.length}")
+    println("Uppercase Name: ${it.uppercase()}")
+}
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 28 Oct 2025 07:22:03 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251028072203.html</guid>
+      </item>
     <item>
       <title>Using the 'associateBy' Function for Creating Maps from Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251027072236.html</link>
