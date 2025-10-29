@@ -1,0 +1,11 @@
+<h2>Using the 'also' Function for Side Effects</h2>
+<p>The 'also' function in Kotlin is a scope function that lets you perform additional operations on an object without altering its original state. This is particularly useful for logging, modifying properties, or chaining operations while maintaining readability. It returns the original object, allowing for fluent-style code.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+val user = User(name = "John", age = 30).also { 
+    println("User created: $it") 
+}.apply { 
+    isActive = true 
+}
+</code>
+</pre>
