@@ -6,12 +6,35 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Oct 2025 07:22:27 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Oct 2025 07:21:18 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'with' Function for Contextual Actions</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251030072118.html</link>
+      <description>&lt;h2&gt;Using the 'with' Function for Contextual Actions&lt;/h2&gt;
+&lt;p&gt;The 'with' function in Kotlin is a powerful scope function that allows you to execute a block of code on a specific object without repeating its reference. This is particularly useful when you want to perform multiple operations on the same object, making your code cleaner and more readable. It can be used for configuring properties or calling multiple methods on an object.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+code class Person(var name: String, var age: Int)
+
+fun main() {
+    val person = Person("Alice", 30)
+
+    with(person) {
+        println("Name: $name")
+        println("Age: $age")
+        // You can also modify properties
+        age += 1
+        println("New Age: $age")
+    }
+}
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 30 Oct 2025 07:21:18 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251030072118.html</guid>
+      </item>
     <item>
       <title>Using the 'also' Function for Side Effects</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251029072227.html</link>
