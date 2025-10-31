@@ -1,0 +1,11 @@
+<h2>Using the 'partition' Function for Splitting Collections</h2>
+<p>The 'partition' function is a useful Kotlin extension function that splits a collection into two lists based on a given predicate. This can be particularly effective when you need to separate items into two categories, such as valid and invalid entries, or even active and inactive users. This function returns a Pair containing the two resulting lists, making it easy to handle both halves of the collection simultaneously.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val (evenNumbers, oddNumbers) = numbers.partition { it % 2 == 0 }
+
+println("Even Numbers: $evenNumbers")  // Output: Even Numbers: [2, 4, 6, 8, 10]
+println("Odd Numbers: $oddNumbers")    // Output: Odd Numbers: [1, 3, 5, 7, 9]
+</code>
+</pre>
