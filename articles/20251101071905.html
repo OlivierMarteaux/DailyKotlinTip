@@ -1,0 +1,7 @@
+<h2>Using the 'takeUnless' Function for Conditional Collection Handling</h2>
+<p>The 'takeUnless' function in Kotlin is a useful extension function that allows you to retrieve a value only if it does not satisfy a given condition. This can be particularly handy when you want to avoid executing code based on certain criteria. It operates similarly to 'takeIf', but with the opposite logic. By using 'takeUnless', you can write more expressive and concise code.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val number = 10
+val result = number.takeUnless { it > 5 } ?: "Number is greater than 5"
+println(result) // Output: "Number is greater than 5"
+</pre>
