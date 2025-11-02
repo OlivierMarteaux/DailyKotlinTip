@@ -6,12 +6,32 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Nov 2025 07:19:05 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 02 Nov 2025 07:19:50 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'any' Function for Existence Checks</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251102071950.html</link>
+      <description>&lt;h2&gt;Using the 'any' Function for Existence Checks&lt;/h2&gt;
+&lt;p&gt;
+The 'any' function in Kotlin is a powerful tool for checking whether any elements in a collection meet a specific condition. This is particularly useful when you want to quickly determine if at least one item in a list or collection satisfies a given predicate without having to manually iterate through the entire collection. It returns a boolean value, making it ideal for conditional logic.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+
+// Check if any number is greater than 3
+val hasGreaterThanThree = numbers.any { it &gt; 3 }
+
+println(hasGreaterThanThree) // Output: true
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 02 Nov 2025 07:19:50 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251102071950.html</guid>
+      </item>
     <item>
       <title>Using the 'takeUnless' Function for Conditional Collection Handling</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251101071905.html</link>
