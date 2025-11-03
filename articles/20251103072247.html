@@ -1,0 +1,15 @@
+<h2>Using the 'run' Function for Scoped Execution</h2>
+<p>The 'run' function in Kotlin is a powerful extension function that can be used for executing a block of code within a specific context. This is particularly useful when you want to execute multiple operations on an object and return a result. It combines the capabilities of 'let' and 'with', allowing you to access the object directly without needing to repeat its name. This can make your code cleaner and more readable.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+data class User(val name: String, val age: Int)
+
+fun main() {
+    val user = User("Alice", 30)
+    
+    val userInfo = user.run {
+        "Name: $name, Age: $age"
+    }
+    
+    println(userInfo) // Output: Name: Alice, Age: 30
+}
+</pre>
