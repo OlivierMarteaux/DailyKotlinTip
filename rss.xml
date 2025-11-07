@@ -6,12 +6,36 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Nov 2025 07:21:46 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Nov 2025 07:21:45 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'combine' Function for Merging Flows</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251107072145.html</link>
+      <description>&lt;h2&gt;Using the 'combine' Function for Merging Flows&lt;/h2&gt;
+&lt;p&gt;The `combine` function in Kotlin Coroutines allows you to merge multiple flows into a single flow by combining their emitted values. This is particularly useful when you want to react to changes from multiple data sources, such as user inputs or network responses, and produce a new output based on the latest values from each source.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+import kotlinx.coroutines.flow.*
+
+fun main() = runBlocking {
+    val flow1 = flowOf(1, 2, 3).onEach { delay(100) }
+    val flow2 = flowOf("A", "B", "C").onEach { delay(150) }
+
+    flow1.combine(flow2) { number, letter -&gt;
+        "$number$letter"
+    }.collect { result -&gt;
+        println(result)
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 07 Nov 2025 07:21:45 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251107072145.html</guid>
+      </item>
     <item>
       <title>Using the 'reduce' Function for Accumulating Values</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251106072146.html</link>
