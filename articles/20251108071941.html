@@ -1,0 +1,7 @@
+<h2>Using the 'mapNotNull' Function for Transforming and Filtering Collections</h2>
+<p>The 'mapNotNull' function is a powerful tool that allows you to transform a collection while simultaneously filtering out any null values. This is particularly useful when you want to apply a transformation that may not produce a result for every element in the collection. By using 'mapNotNull', you can maintain a concise and clean code structure, avoiding the need for additional filtering steps.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val names: List<String?> = listOf("Alice", null, "Bob", "Charlie", null)
+val lengths: List<Int> = names.mapNotNull { it?.length }
+// lengths will be [5, 3, 7]
+</pre>
