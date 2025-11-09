@@ -6,12 +6,30 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Nov 2025 07:19:41 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Nov 2025 07:20:17 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'flatMap' Function for Transforming Nested Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251109072017.html</link>
+      <description>&lt;h2&gt;Using the 'flatMap' Function for Transforming Nested Collections&lt;/h2&gt;
+&lt;p&gt;The 'flatMap' function is a powerful tool for transforming and flattening nested collections in Kotlin. It allows you to apply a transformation function to each element of a collection and then merge the results into a single collection. This is particularly useful when dealing with collections of collections, such as lists of lists, where you want to flatten the structure into a single list while applying some transformation to the inner elements.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val nestedList = listOf(
+    listOf(1, 2, 3),
+    listOf(4, 5),
+    listOf(6, 7, 8, 9)
+)
+
+val flattenedList = nestedList.flatMap { it.map { number -&gt; number * 2 } }
+// flattenedList will be [2, 4, 6, 8, 10, 12, 14, 16, 18]
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 09 Nov 2025 07:20:17 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251109072017.html</guid>
+      </item>
     <item>
       <title>Using the 'mapNotNull' Function for Transforming and Filtering Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251108071941.html</link>

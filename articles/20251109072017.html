@@ -1,0 +1,12 @@
+<h2>Using the 'flatMap' Function for Transforming Nested Collections</h2>
+<p>The 'flatMap' function is a powerful tool for transforming and flattening nested collections in Kotlin. It allows you to apply a transformation function to each element of a collection and then merge the results into a single collection. This is particularly useful when dealing with collections of collections, such as lists of lists, where you want to flatten the structure into a single list while applying some transformation to the inner elements.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val nestedList = listOf(
+    listOf(1, 2, 3),
+    listOf(4, 5),
+    listOf(6, 7, 8, 9)
+)
+
+val flattenedList = nestedList.flatMap { it.map { number -> number * 2 } }
+// flattenedList will be [2, 4, 6, 8, 10, 12, 14, 16, 18]
+</pre>
