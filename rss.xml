@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Nov 2025 07:20:17 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 07:22:40 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'fold' Function for Reducing Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251110072240.html</link>
+      <description>&lt;h2&gt;Using the 'fold' Function for Reducing Collections&lt;/h2&gt;
+&lt;p&gt;The 'fold' function is a powerful tool in Kotlin for accumulating a value starting from an initial value. It allows you to iterate through a collection while applying a specified operation to combine the elements into a single result. This is particularly useful when you need to perform complex reductions, such as calculating totals or building a custom object from a list of items.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+val sum = numbers.fold(0) { accumulator, number -&gt; accumulator + number }
+println(sum) // Output: 15
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 10 Nov 2025 07:22:40 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251110072240.html</guid>
+      </item>
     <item>
       <title>Using the 'flatMap' Function for Transforming Nested Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251109072017.html</link>

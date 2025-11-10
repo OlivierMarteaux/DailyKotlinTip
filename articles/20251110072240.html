@@ -1,0 +1,7 @@
+<h2>Using the 'fold' Function for Reducing Collections</h2>
+<p>The 'fold' function is a powerful tool in Kotlin for accumulating a value starting from an initial value. It allows you to iterate through a collection while applying a specified operation to combine the elements into a single result. This is particularly useful when you need to perform complex reductions, such as calculating totals or building a custom object from a list of items.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 5)
+val sum = numbers.fold(0) { accumulator, number -> accumulator + number }
+println(sum) // Output: 15
+</pre>
