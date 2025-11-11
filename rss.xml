@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Nov 2025 07:22:40 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Nov 2025 07:22:49 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'distinct' Function for Unique Elements in Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251111072249.html</link>
+      <description>&lt;h2&gt;Using the 'distinct' Function for Unique Elements in Collections&lt;/h2&gt;
+&lt;p&gt;The 'distinct' function in Kotlin allows you to easily filter out duplicate elements from a collection, returning a new collection that contains only unique elements. This is particularly useful when you want to ensure that your dataset does not contain any redundant entries, such as when displaying user data or processing results from a database query.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 2, 3, 4, 4, 5)
+val distinctNumbers = numbers.distinct()
+println(distinctNumbers) // Output: [1, 2, 3, 4, 5]
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 11 Nov 2025 07:22:49 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251111072249.html</guid>
+      </item>
     <item>
       <title>Using the 'fold' Function for Reducing Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251110072240.html</link>
