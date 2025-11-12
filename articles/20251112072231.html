@@ -1,0 +1,7 @@
+<h2>Using the 'takeWhile' Function for Conditional Collection Handling</h2>
+<p>The 'takeWhile' function allows you to retrieve elements from a collection as long as a specified condition holds true. This is particularly useful when you want to extract a subset of elements that meet certain criteria before encountering an item that doesn't. For example, if you have a list of numbers and you want to take elements until you hit a number that is not less than 5, 'takeWhile' can help you achieve that efficiently.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7)
+val takenNumbers = numbers.takeWhile { it < 5 }
+// takenNumbers will be [1, 2, 3, 4]
+</pre>
