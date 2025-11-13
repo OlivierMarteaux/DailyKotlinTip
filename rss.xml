@@ -6,12 +6,26 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Nov 2025 07:22:31 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Nov 2025 07:22:47 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeLast' Function for Retrieving Last Elements of Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251113072247.html</link>
+      <description>&lt;h2&gt;Using the 'takeLast' Function for Retrieving Last Elements of Collections&lt;/h2&gt;
+&lt;p&gt;The 'takeLast' function is a useful tool in Kotlin for retrieving the last 'n' elements from a collection. This can be particularly handy when you need to display the most recent items or just want to focus on the tail end of a list. For example, if you have a list of user actions and you want to show the last five actions, 'takeLast' simplifies this task.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val actions = listOf("Login", "View", "Edit", "Logout", "Upload", "Delete")
+val lastFiveActions = actions.takeLast(5)
+
+println(lastFiveActions) // Output: [View, Edit, Logout, Upload, Delete]
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 13 Nov 2025 07:22:47 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251113072247.html</guid>
+      </item>
     <item>
       <title>Using the 'takeWhile' Function for Conditional Collection Handling</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251112072231.html</link>

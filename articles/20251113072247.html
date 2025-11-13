@@ -1,0 +1,8 @@
+<h2>Using the 'takeLast' Function for Retrieving Last Elements of Collections</h2>
+<p>The 'takeLast' function is a useful tool in Kotlin for retrieving the last 'n' elements from a collection. This can be particularly handy when you need to display the most recent items or just want to focus on the tail end of a list. For example, if you have a list of user actions and you want to show the last five actions, 'takeLast' simplifies this task.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val actions = listOf("Login", "View", "Edit", "Logout", "Upload", "Delete")
+val lastFiveActions = actions.takeLast(5)
+
+println(lastFiveActions) // Output: [View, Edit, Logout, Upload, Delete]
+</pre>
