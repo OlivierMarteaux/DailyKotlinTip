@@ -6,12 +6,29 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Nov 2025 07:22:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Nov 2025 07:22:24 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'groupBy' Function for Organizing Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251114072224.html</link>
+      <description>&lt;h2&gt;Using the 'groupBy' Function for Organizing Collections&lt;/h2&gt;
+&lt;p&gt;The 'groupBy' function in Kotlin is a powerful tool for organizing a collection into a map of lists, where each key in the map corresponds to a distinct value obtained by applying a specified selector function. This is particularly useful for categorizing items based on certain attributes, making it easier to manage and analyze grouped data.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val items = listOf("apple", "banana", "avocado", "blueberry", "cherry")
+
+// Grouping items by their first letter
+val groupedByFirstLetter = items.groupBy { it.first() }
+
+println(groupedByFirstLetter)
+// Output: {a=[apple, avocado], b=[banana, blueberry], c=[cherry]}
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 14 Nov 2025 07:22:24 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251114072224.html</guid>
+      </item>
     <item>
       <title>Using the 'takeLast' Function for Retrieving Last Elements of Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251113072247.html</link>
