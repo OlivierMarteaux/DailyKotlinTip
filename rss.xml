@@ -6,12 +6,29 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Nov 2025 07:19:41 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Nov 2025 07:20:50 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Nullable Types</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251116072050.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Nullable Types&lt;/h2&gt;
+&lt;p&gt;The 'let' function is particularly useful for working with nullable types in Kotlin. It allows you to execute a block of code only if the value is not null, providing a safe way to handle potential null references. This can help prevent NullPointerExceptions and make your code cleaner and more readable.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val name: String? = "John Doe"
+
+name?.let {
+    println("The name is: $it")
+} ?: run {
+    println("Name is null")
+}
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 16 Nov 2025 07:20:50 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251116072050.html</guid>
+      </item>
     <item>
       <title>Using the 'takeUntil' Function for Conditional Collection Handling</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251115071941.html</link>
