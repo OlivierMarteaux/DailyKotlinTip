@@ -6,12 +6,31 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Nov 2025 07:20:50 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Nov 2025 07:23:09 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'associate' Function for Creating Maps from Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251117072309.html</link>
+      <description>&lt;h2&gt;Using the 'associate' Function for Creating Maps from Collections&lt;/h2&gt;
+&lt;p&gt;The 'associate' function in Kotlin allows you to transform a collection into a map by providing a key-value pair for each element. This is particularly useful when you want to quickly access elements by a specific key, making data retrieval more efficient. For example, you might have a list of users and want to create a map where each user's ID is the key and the user object is the value.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+data class User(val id: Int, val name: String)
+
+val users = listOf(User(1, "Alice"), User(2, "Bob"), User(3, "Charlie"))
+
+val userMap = users.associate { it.id to it }
+
+println(userMap) // Output: {1=User(id=1, name=Alice), 2=User(id=2, name=Bob), 3=User(id=3, name=Charlie)}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 17 Nov 2025 07:23:09 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251117072309.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function for Nullable Types</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251116072050.html</link>
