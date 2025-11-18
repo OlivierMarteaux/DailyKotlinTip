@@ -1,0 +1,11 @@
+<h2>Using the 'let' Function for Chaining Operations</h2>
+<p>The 'let' function in Kotlin is a great way to perform operations on an object and return a result. It is particularly useful for chaining operations in a clean and readable manner. This can help in avoiding null checks and makes the code more concise, especially when working with nullable types.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val name: String? = "Kotlin"
+val length = name?.let {
+    println("The name is $it") // Side-effect: Print the name
+    it.length // Return the length
+} ?: 0 // Fallback if name is null
+
+println("Length of name: $length") // Output: Length of name: 6
+</pre>
