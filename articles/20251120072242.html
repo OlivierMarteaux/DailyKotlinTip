@@ -1,0 +1,11 @@
+<h2>Using the 'with' Function for Context-Specific Operations</h2>
+<p>The 'with' function in Kotlin allows you to execute a block of code within the context of an object. This is particularly useful for performing multiple operations on the same object without repeatedly referencing it. It enhances code readability and reduces redundancy.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val person = Person("John", 30)
+
+with(person) {
+    println("Name: $name")
+    println("Age: $age")
+    // Additional operations can be performed here
+}
+</pre>
