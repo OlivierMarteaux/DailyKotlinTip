@@ -1,0 +1,16 @@
+<h2>Using the 'also' Function for Side Effects</h2>
+<p>The 'also' function in Kotlin is useful for executing additional side effects on an object while keeping the object itself unchanged. This is particularly handy when you want to perform operations such as logging or modifying properties without altering the original object. It enhances code readability by clearly indicating the intention of performing a side effect.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+data class User(val name: String, var age: Int)
+
+fun main() {
+    val user = User("Alice", 25)
+
+    user.also {
+        println("User before update: $it")
+        it.age += 1 // Increase age by 1
+    }.also {
+        println("User after update: $it")
+    }
+}
+</pre>

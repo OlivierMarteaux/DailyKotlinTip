@@ -6,12 +6,34 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Nov 2025 07:22:42 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Nov 2025 07:23:25 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'also' Function for Side Effects</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251121072325.html</link>
+      <description>&lt;h2&gt;Using the 'also' Function for Side Effects&lt;/h2&gt;
+&lt;p&gt;The 'also' function in Kotlin is useful for executing additional side effects on an object while keeping the object itself unchanged. This is particularly handy when you want to perform operations such as logging or modifying properties without altering the original object. It enhances code readability by clearly indicating the intention of performing a side effect.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+data class User(val name: String, var age: Int)
+
+fun main() {
+    val user = User("Alice", 25)
+
+    user.also {
+        println("User before update: $it")
+        it.age += 1 // Increase age by 1
+    }.also {
+        println("User after update: $it")
+    }
+}
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 21 Nov 2025 07:23:25 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251121072325.html</guid>
+      </item>
     <item>
       <title>Using the 'with' Function for Context-Specific Operations</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251120072242.html</link>
