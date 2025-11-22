@@ -1,0 +1,7 @@
+<h2>Using the 'let' Function for Transforming Collections</h2>
+<p>The 'let' function can be particularly useful when you want to perform operations on each element of a collection while also transforming those elements. By combining 'let' with 'map', you can create a new collection with transformed elements in a concise and readable way.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 5)
+val squaredNumbers = numbers.map { it.let { number -> number * number } }
+println(squaredNumbers) // Output: [1, 4, 9, 16, 25]
+</pre>

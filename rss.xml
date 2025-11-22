@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Nov 2025 07:23:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 22 Nov 2025 07:20:45 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Transforming Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251122072045.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Transforming Collections&lt;/h2&gt;
+&lt;p&gt;The 'let' function can be particularly useful when you want to perform operations on each element of a collection while also transforming those elements. By combining 'let' with 'map', you can create a new collection with transformed elements in a concise and readable way.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+val squaredNumbers = numbers.map { it.let { number -&gt; number * number } }
+println(squaredNumbers) // Output: [1, 4, 9, 16, 25]
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 22 Nov 2025 07:20:45 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251122072045.html</guid>
+      </item>
     <item>
       <title>Using the 'also' Function for Side Effects</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251121072325.html</link>
