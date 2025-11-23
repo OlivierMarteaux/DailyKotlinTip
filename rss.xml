@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Nov 2025 07:20:45 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 23 Nov 2025 07:21:23 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'filterIsInstance' Function for Type-Safe Filtering</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251123072123.html</link>
+      <description>&lt;h2&gt;Using the 'filterIsInstance' Function for Type-Safe Filtering&lt;/h2&gt;
+&lt;p&gt;The 'filterIsInstance' function in Kotlin is a powerful tool for filtering collections based on a specific type. This is particularly useful when dealing with collections that may contain objects of various types. By using 'filterIsInstance', you can ensure type safety and avoid the need for explicit type checks and casts, which can lead to runtime exceptions.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val mixedList: List&lt;Any&gt; = listOf("String", 1, 2.0, 3, "Another String")
+
+val integers: List&lt;Int&gt; = mixedList.filterIsInstance&lt;Int&gt;()
+
+println(integers) // Output: [1, 3]
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 23 Nov 2025 07:21:23 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251123072123.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function for Transforming Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251122072045.html</link>
