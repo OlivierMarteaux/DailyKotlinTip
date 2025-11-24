@@ -6,12 +6,31 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Nov 2025 07:21:23 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Nov 2025 07:23:16 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'onEach' Function for Side Effects on Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251124072316.html</link>
+      <description>&lt;h2&gt;Using the 'onEach' Function for Side Effects on Collections&lt;/h2&gt;
+&lt;p&gt;The 'onEach' function is a useful extension function in Kotlin that allows you to perform side effects on each element of a collection without altering the original collection. This is particularly useful for logging, debugging, or any operation where you want to execute a block of code for each item while still keeping the original collection intact.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+
+// Using onEach to print each number
+numbers.onEach { number -&gt;
+    println("Number: $number")
+}
+
+// The original list remains unchanged
+println("Original list: $numbers")
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 24 Nov 2025 07:23:16 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251124072316.html</guid>
+      </item>
     <item>
       <title>Using the 'filterIsInstance' Function for Type-Safe Filtering</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251123072123.html</link>
