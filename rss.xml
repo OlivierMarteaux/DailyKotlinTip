@@ -6,12 +6,29 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Nov 2025 07:23:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Nov 2025 07:23:14 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'partition' Function for Splitting Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251125072314.html</link>
+      <description>&lt;h2&gt;Using the 'partition' Function for Splitting Collections&lt;/h2&gt;
+&lt;p&gt;The 'partition' function is a useful tool for splitting a collection into two lists based on a given predicate. This can be particularly handy when you need to separate items into categories, such as filtering out valid and invalid entries from a list. The function returns a Pair containing two lists: the first list consists of the elements that match the predicate, and the second list consists of the elements that do not.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val (evenNumbers, oddNumbers) = numbers.partition { it % 2 == 0 }
+
+println("Even Numbers: $evenNumbers") // Output: Even Numbers: [2, 4, 6, 8, 10]
+println("Odd Numbers: $oddNumbers")   // Output: Odd Numbers: [1, 3, 5, 7, 9]
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 25 Nov 2025 07:23:14 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251125072314.html</guid>
+      </item>
     <item>
       <title>Using the 'onEach' Function for Side Effects on Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251124072316.html</link>
