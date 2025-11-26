@@ -6,12 +6,36 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Nov 2025 07:23:14 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Nov 2025 07:22:25 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'zip' Function for Pairing Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251126072225.html</link>
+      <description>&lt;h2&gt;Using the 'zip' Function for Pairing Collections&lt;/h2&gt;
+&lt;p&gt;The 'zip' function in Kotlin allows you to combine two collections into a single collection of pairs. Each element of the first collection is paired with the corresponding element of the second collection, creating a new list of pairs (tuples). This is especially useful when you need to correlate values between two lists, such as names and ages, or keys and values.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+val names = listOf("Alice", "Bob", "Charlie")
+val ages = listOf(25, 30, 35)
+
+val paired = names.zip(ages)
+
+paired.forEach { (name, age) -&gt;
+    println("$name is $age years old")
+}
+// Output:
+// Alice is 25 years old
+// Bob is 30 years old
+// Charlie is 35 years old
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 26 Nov 2025 07:22:25 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251126072225.html</guid>
+      </item>
     <item>
       <title>Using the 'partition' Function for Splitting Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251125072314.html</link>

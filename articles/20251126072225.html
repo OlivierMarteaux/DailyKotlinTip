@@ -1,0 +1,18 @@
+<h2>Using the 'zip' Function for Pairing Collections</h2>
+<p>The 'zip' function in Kotlin allows you to combine two collections into a single collection of pairs. Each element of the first collection is paired with the corresponding element of the second collection, creating a new list of pairs (tuples). This is especially useful when you need to correlate values between two lists, such as names and ages, or keys and values.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+val names = listOf("Alice", "Bob", "Charlie")
+val ages = listOf(25, 30, 35)
+
+val paired = names.zip(ages)
+
+paired.forEach { (name, age) ->
+    println("$name is $age years old")
+}
+// Output:
+// Alice is 25 years old
+// Bob is 30 years old
+// Charlie is 35 years old
+</code>
+</pre>
