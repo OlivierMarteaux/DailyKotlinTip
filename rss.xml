@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Nov 2025 07:22:25 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 27 Nov 2025 07:24:34 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'take' Function for Limiting Collection Size</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251127072434.html</link>
+      <description>&lt;h2&gt;Using the 'take' Function for Limiting Collection Size&lt;/h2&gt;
+&lt;p&gt;The 'take' function in Kotlin is a powerful tool for limiting the number of elements you retrieve from a collection. This can be particularly useful when you only need a subset of data, such as the first few items in a list. By using 'take', you can avoid unnecessary processing and improve performance in scenarios where only a portion of the data is required.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val firstThreeNumbers = numbers.take(3)
+println(firstThreeNumbers) // Output: [1, 2, 3]
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 27 Nov 2025 07:24:34 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251127072434.html</guid>
+      </item>
     <item>
       <title>Using the 'zip' Function for Pairing Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251126072225.html</link>
