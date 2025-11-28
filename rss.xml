@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Nov 2025 07:24:34 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 28 Nov 2025 07:23:10 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'map' Function for Transforming Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251128072310.html</link>
+      <description>&lt;h2&gt;Using the 'map' Function for Transforming Collections&lt;/h2&gt;
+&lt;p&gt;The 'map' function is a powerful and commonly used higher-order function in Kotlin that allows you to transform each element of a collection into another form. It creates a new collection containing the results of applying a given transformation function to each element of the original collection. This is particularly useful when you want to convert a list of one type into a list of another type, while maintaining the original order of elements.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+val squaredNumbers = numbers.map { it * it }
+// squaredNumbers will be [1, 4, 9, 16, 25]
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 28 Nov 2025 07:23:10 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251128072310.html</guid>
+      </item>
     <item>
       <title>Using the 'take' Function for Limiting Collection Size</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251127072434.html</link>

@@ -1,0 +1,7 @@
+<h2>Using the 'map' Function for Transforming Collections</h2>
+<p>The 'map' function is a powerful and commonly used higher-order function in Kotlin that allows you to transform each element of a collection into another form. It creates a new collection containing the results of applying a given transformation function to each element of the original collection. This is particularly useful when you want to convert a list of one type into a list of another type, while maintaining the original order of elements.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 5)
+val squaredNumbers = numbers.map { it * it }
+// squaredNumbers will be [1, 4, 9, 16, 25]
+</pre>
