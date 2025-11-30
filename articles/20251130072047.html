@@ -1,0 +1,12 @@
+<h2>Using the 'flatMap' Function for Flattening Nested Collections</h2>
+<p>The 'flatMap' function is useful when you have a collection of collections and you want to transform each element and flatten the results into a single collection. This can be particularly handy when dealing with lists of lists, such as when you have data structures that represent a hierarchy or nested relationships.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val nestedList = listOf(
+    listOf(1, 2, 3),
+    listOf(4, 5),
+    listOf(6, 7, 8, 9)
+)
+
+val flattenedList = nestedList.flatMap { it.map { number -> number * 2 } }
+// flattenedList will contain [2, 4, 6, 8, 10, 12, 14, 16, 18]
+</pre>
