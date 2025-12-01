@@ -6,12 +6,38 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Nov 2025 07:20:47 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Dec 2025 07:26:38 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'combine' Function for Merging Flows</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251201072638.html</link>
+      <description>&lt;h2&gt;Using the 'combine' Function for Merging Flows&lt;/h2&gt;
+&lt;p&gt;The 'combine' function in Kotlin Coroutines allows you to merge multiple flows into a single flow. This is particularly useful when you want to react to changes in multiple data sources simultaneously, such as combining user input from two text fields and updating the UI based on their values. The 'combine' function emits a new value whenever any of the combined flows emit a value, providing a reactive approach to data handling.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.runBlocking
+
+fun main() = runBlocking {
+    val flowA = flowOf("Hello")
+    val flowB = flowOf("World")
+
+    val combinedFlow = combine(flowA, flowB) { a, b -&gt; "$a $b" }
+
+    combinedFlow.collect { value -&gt;
+        println(value) // Output: Hello World
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 01 Dec 2025 07:26:38 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251201072638.html</guid>
+      </item>
     <item>
       <title>Using the 'flatMap' Function for Flattening Nested Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251130072047.html</link>
