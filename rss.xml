@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Dec 2025 07:26:38 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 02 Dec 2025 07:25:23 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'distinct' Function for Removing Duplicates from Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251202072523.html</link>
+      <description>&lt;h2&gt;Using the 'distinct' Function for Removing Duplicates from Collections&lt;/h2&gt;
+&lt;p&gt;The 'distinct' function is a powerful tool in Kotlin that allows you to remove duplicate elements from a collection. This can be particularly useful when you want to ensure that your data set contains only unique values, such as when processing user inputs or filtering results from a database. The 'distinct' function returns a list containing only distinct elements from the original collection, preserving the order of their first occurrence.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 2, 3, 4, 4, 5)
+val distinctNumbers = numbers.distinct()
+println(distinctNumbers) // Output: [1, 2, 3, 4, 5]
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 02 Dec 2025 07:25:23 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251202072523.html</guid>
+      </item>
     <item>
       <title>Using the 'combine' Function for Merging Flows</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251201072638.html</link>
