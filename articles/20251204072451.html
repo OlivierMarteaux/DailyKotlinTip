@@ -1,0 +1,9 @@
+<h2>Using the 'fold' Function for Accumulating Values with an Initial Value</h2>
+<p>The 'fold' function in Kotlin is used to accumulate a value starting with an initial value. It allows you to combine elements of a collection into a single result by applying a binary operation. This is particularly useful when you need to compute a value from a collection while maintaining an initial state or value.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+val numbers = listOf(1, 2, 3, 4, 5)
+val sum = numbers.fold(0) { accumulator, number -> accumulator + number }
+println("Sum: $sum") // Output: Sum: 15
+</code>
+</pre>
