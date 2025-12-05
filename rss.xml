@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Dec 2025 07:24:51 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Dec 2025 07:24:22 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'count' Function for Counting Elements in Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251205072422.html</link>
+      <description>&lt;h2&gt;Using the 'count' Function for Counting Elements in Collections&lt;/h2&gt;
+&lt;p&gt;The 'count' function in Kotlin allows you to quickly determine the number of elements in a collection that meet a specific condition. This is particularly useful when you want to filter elements based on a predicate without manually iterating through the collection.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val evenCount = numbers.count { it % 2 == 0 }
+println("Number of even numbers: $evenCount") // Output: Number of even numbers: 5
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 05 Dec 2025 07:24:22 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251205072422.html</guid>
+      </item>
     <item>
       <title>Using the 'fold' Function for Accumulating Values with an Initial Value</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251204072451.html</link>
