@@ -6,12 +6,33 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Dec 2025 07:24:22 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Dec 2025 07:21:19 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'firstOrNull' Function for Safe Element Retrieval</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251206072119.html</link>
+      <description>&lt;h2&gt;Using the 'firstOrNull' Function for Safe Element Retrieval&lt;/h2&gt;
+&lt;p&gt;The 'firstOrNull' function is particularly useful when you need to retrieve the first element of a collection that matches a certain condition, but you want to avoid exceptions in case no such element exists. This function returns the first element that matches the given predicate or null if no such element is found. It helps in writing safer and more concise code without the need to check for the existence of an element explicitly.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+
+// Retrieve the first even number or null if there is none
+val firstEven = numbers.firstOrNull { it % 2 == 0 }
+
+println(firstEven) // Output: 2
+
+// Retrieve the first number greater than 10 or null if there is none
+val greaterThanTen = numbers.firstOrNull { it &gt; 10 }
+
+println(greaterThanTen) // Output: null
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 06 Dec 2025 07:21:19 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251206072119.html</guid>
+      </item>
     <item>
       <title>Using the 'count' Function for Counting Elements in Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251205072422.html</link>

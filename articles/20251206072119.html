@@ -1,0 +1,15 @@
+<h2>Using the 'firstOrNull' Function for Safe Element Retrieval</h2>
+<p>The 'firstOrNull' function is particularly useful when you need to retrieve the first element of a collection that matches a certain condition, but you want to avoid exceptions in case no such element exists. This function returns the first element that matches the given predicate or null if no such element is found. It helps in writing safer and more concise code without the need to check for the existence of an element explicitly.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 5)
+
+// Retrieve the first even number or null if there is none
+val firstEven = numbers.firstOrNull { it % 2 == 0 }
+
+println(firstEven) // Output: 2
+
+// Retrieve the first number greater than 10 or null if there is none
+val greaterThanTen = numbers.firstOrNull { it > 10 }
+
+println(greaterThanTen) // Output: null
+</pre>
