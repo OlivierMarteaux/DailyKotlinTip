@@ -6,12 +6,34 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Dec 2025 07:21:19 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Dec 2025 07:21:33 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'groupBy' Function for Grouping Collection Elements</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251207072133.html</link>
+      <description>&lt;h2&gt;Using the 'groupBy' Function for Grouping Collection Elements&lt;/h2&gt;
+&lt;p&gt;The 'groupBy' function is a powerful tool for organizing elements of a collection into a map where each key corresponds to a specific criterion, and the value is a list of elements that match that criterion. This is particularly useful when you want to categorize items based on a property, such as grouping users by their age or products by their category.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+data class User(val name: String, val age: Int)
+
+val users = listOf(
+    User("Alice", 30),
+    User("Bob", 25),
+    User("Charlie", 30),
+    User("David", 25)
+)
+
+val groupedByAge = users.groupBy { it.age }
+
+println(groupedByAge) // Output: {30=[User(name=Alice, age=30), User(name=Charlie, age=30)], 25=[User(name=Bob, age=25), User(name=David, age=25)]}
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 07 Dec 2025 07:21:33 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251207072133.html</guid>
+      </item>
     <item>
       <title>Using the 'firstOrNull' Function for Safe Element Retrieval</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251206072119.html</link>
