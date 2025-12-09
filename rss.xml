@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Dec 2025 07:27:24 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Dec 2025 07:25:51 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeLast' Function for Retrieving the Last Elements of a Collection</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251209072551.html</link>
+      <description>&lt;h2&gt;Using the 'takeLast' Function for Retrieving the Last Elements of a Collection&lt;/h2&gt;
+&lt;p&gt;The 'takeLast' function in Kotlin is useful when you want to obtain a specified number of elements from the end of a collection. This can be particularly handy in scenarios such as displaying recent items, logs, or any other context where the latest entries are of interest.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val lastThreeNumbers = numbers.takeLast(3)
+println(lastThreeNumbers) // Output: [8, 9, 10]
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 09 Dec 2025 07:25:51 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251209072551.html</guid>
+      </item>
     <item>
       <title>Using the 'apply' Function for Object Configuration</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251208072724.html</link>
