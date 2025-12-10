@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Dec 2025 07:25:51 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Dec 2025 07:26:26 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'find' Function for Finding Specific Elements in Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251210072626.html</link>
+      <description>&lt;h2&gt;Using the 'find' Function for Finding Specific Elements in Collections&lt;/h2&gt;
+&lt;p&gt;The 'find' function is a powerful tool for searching through collections in Kotlin. It returns the first element that matches the given predicate or null if no such element is found. This is particularly useful when you need to locate an element based on specific criteria without having to manually iterate over the collection.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+val firstEven = numbers.find { it % 2 == 0 }
+println(firstEven) // Output: 2
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 10 Dec 2025 07:26:26 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251210072626.html</guid>
+      </item>
     <item>
       <title>Using the 'takeLast' Function for Retrieving the Last Elements of a Collection</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251209072551.html</link>
