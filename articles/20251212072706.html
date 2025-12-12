@@ -1,0 +1,19 @@
+<h2>Using the 'with' Function for Context-Specific Operations</h2>
+<p>The 'with' function in Kotlin is a scope function that allows you to execute a block of code on a specific object, making it easier to call multiple methods or properties on that object without repeating its name. This can improve code readability and reduce redundancy, especially when working with complex objects.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+data class User(var name: String, var age: Int)
+
+fun main() {
+    val user = User("Alice", 30)
+
+    // Using 'with' to modify user properties
+    with(user) {
+        name = "Bob"
+        age += 1
+    }
+
+    println("Updated User: ${user.name}, Age: ${user.age}")
+}
+</code>
+</pre>

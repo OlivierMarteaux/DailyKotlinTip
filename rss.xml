@@ -6,12 +6,37 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Dec 2025 07:27:50 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Dec 2025 07:27:06 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'with' Function for Context-Specific Operations</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251212072706.html</link>
+      <description>&lt;h2&gt;Using the 'with' Function for Context-Specific Operations&lt;/h2&gt;
+&lt;p&gt;The 'with' function in Kotlin is a scope function that allows you to execute a block of code on a specific object, making it easier to call multiple methods or properties on that object without repeating its name. This can improve code readability and reduce redundancy, especially when working with complex objects.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+data class User(var name: String, var age: Int)
+
+fun main() {
+    val user = User("Alice", 30)
+
+    // Using 'with' to modify user properties
+    with(user) {
+        name = "Bob"
+        age += 1
+    }
+
+    println("Updated User: ${user.name}, Age: ${user.age}")
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 12 Dec 2025 07:27:06 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251212072706.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function with Nullable Types for Safe Calls</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251211072750.html</link>
