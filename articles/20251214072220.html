@@ -1,0 +1,23 @@
+<h2>Using the 'associateBy' Function for Creating Maps from Collections</h2>
+<p>
+The 'associateBy' function is a powerful way to transform a collection into a map, where each element is associated with a key derived from the element itself. This is particularly useful when you need quick lookups based on specific properties of the objects in your collection. 
+</p>
+<p>
+For example, if you have a list of users and you want to create a map where the user ID is the key and the user object is the value, you can use 'associateBy' to achieve this easily.
+</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+<code>
+data class User(val id: Int, val name: String)
+
+val users = listOf(
+    User(1, "Alice"),
+    User(2, "Bob"),
+    User(3, "Charlie")
+)
+
+val userMap = users.associateBy { it.id }
+
+// Now you can access users by their ID
+val userWithId2 = userMap[2] // Returns User(2, "Bob")
+</code>
+</pre>

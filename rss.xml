@@ -6,12 +6,41 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Dec 2025 07:24:45 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Dec 2025 07:22:20 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'associateBy' Function for Creating Maps from Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251214072220.html</link>
+      <description>&lt;h2&gt;Using the 'associateBy' Function for Creating Maps from Collections&lt;/h2&gt;
+&lt;p&gt;
+The 'associateBy' function is a powerful way to transform a collection into a map, where each element is associated with a key derived from the element itself. This is particularly useful when you need quick lookups based on specific properties of the objects in your collection. 
+&lt;/p&gt;
+&lt;p&gt;
+For example, if you have a list of users and you want to create a map where the user ID is the key and the user object is the value, you can use 'associateBy' to achieve this easily.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+data class User(val id: Int, val name: String)
+
+val users = listOf(
+    User(1, "Alice"),
+    User(2, "Bob"),
+    User(3, "Charlie")
+)
+
+val userMap = users.associateBy { it.id }
+
+// Now you can access users by their ID
+val userWithId2 = userMap[2] // Returns User(2, "Bob")
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 14 Dec 2025 07:22:20 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251214072220.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function for Chaining Operations</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251213072445.html</link>
