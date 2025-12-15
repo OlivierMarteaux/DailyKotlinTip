@@ -6,12 +6,32 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Dec 2025 07:22:20 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Dec 2025 07:27:49 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Transforming Nullable Types</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251215072749.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Transforming Nullable Types&lt;/h2&gt;
+&lt;p&gt;
+The 'let' function in Kotlin is not only useful for chaining operations but also for transforming nullable types in a safe manner. This allows you to perform operations on non-null values while avoiding null pointer exceptions. By using 'let', you can simplify your code and make it more readable.
+&lt;/p&gt;
+&lt;p&gt;
+Consider a scenario where you have a nullable string variable and you want to convert it to uppercase but only if it is not null. You can achieve this concisely with the 'let' function.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val nullableString: String? = "hello world"
+
+val upperCaseString = nullableString?.let { it.uppercase() } ?: "default value"
+
+println(upperCaseString) // Output: "HELLO WORLD"
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 15 Dec 2025 07:27:49 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251215072749.html</guid>
+      </item>
     <item>
       <title>Using the 'associateBy' Function for Creating Maps from Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251214072220.html</link>
