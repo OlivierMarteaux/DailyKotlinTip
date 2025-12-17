@@ -6,12 +6,32 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Dec 2025 07:26:42 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Dec 2025 07:26:18 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'zip' Function for Pairing Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251217072618.html</link>
+      <description>&lt;h2&gt;Using the 'zip' Function for Pairing Collections&lt;/h2&gt;
+&lt;p&gt;The 'zip' function in Kotlin allows you to combine two collections into a single collection of pairs. This is particularly useful when you want to correlate elements from two different lists based on their indices. The resulting collection consists of pairs of elements from the two input collections, which can be especially handy when you need to process related data together.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+val names = listOf("Alice", "Bob", "Charlie")
+val scores = listOf(85, 90, 95)
+
+val pairedList = names.zip(scores)
+
+pairedList.forEach { (name, score) -&gt;
+    println("$name scored $score")
+}
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 17 Dec 2025 07:26:18 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251217072618.html</guid>
+      </item>
     <item>
       <title>Using the 'takeUnless' Function for Conditional Element Retrieval</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251216072642.html</link>
