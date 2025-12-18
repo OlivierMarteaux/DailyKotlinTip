@@ -1,0 +1,13 @@
+<h2>Using the 'onEach' Function for Side Effects in Collections</h2>
+<p>The 'onEach' function is a powerful tool in Kotlin that allows you to perform side effects on each element of a collection while retaining the original collection unchanged. This is particularly useful when you want to execute an action for each element, such as logging or updating a UI component, without altering the collection itself.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 5)
+
+numbers.onEach { 
+    println("Current number: $it") // Side effect: logging
+}.map { 
+    it * 2 // Transforming each element (the original list remains unchanged)
+}.also { 
+    println("Doubled numbers: $it") 
+}
+</pre>
