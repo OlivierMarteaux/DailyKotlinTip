@@ -1,0 +1,13 @@
+<h2>Using the 'none' Function for Checking Non-Existence in Collections</h2>
+<p>The 'none' function in Kotlin is a convenient way to check if no elements in a collection satisfy a given predicate. This can be particularly useful when you want to validate that a collection is empty or that specific conditions are not met. For example, you might want to ensure that no users in a list are under the age of 18 before proceeding with an operation.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val users = listOf(User("Alice", 25), User("Bob", 30), User("Charlie", 17))
+
+val allAdults = users.none { it.age < 18 }
+
+if (allAdults) {
+    println("All users are adults.")
+} else {
+    println("There are users under 18.")
+}
+</pre>
