@@ -1,0 +1,7 @@
+<h2>Using the 'distinct' Function for Removing Duplicate Elements</h2>
+<p>The 'distinct' function in Kotlin allows you to filter a collection, returning only unique elements. This is particularly useful when you need to ensure that your data set contains no duplicates, such as when displaying a list of user names or product IDs in an application. It operates by comparing the elements in the collection based on their equality, which can be customized through the use of a selector function.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 2, 3, 4, 4, 5)
+val distinctNumbers = numbers.distinct()
+println(distinctNumbers) // Output: [1, 2, 3, 4, 5]
+</pre>

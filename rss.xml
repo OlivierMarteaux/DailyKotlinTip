@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Dec 2025 07:27:19 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Dec 2025 07:27:18 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'distinct' Function for Removing Duplicate Elements</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251223072718.html</link>
+      <description>&lt;h2&gt;Using the 'distinct' Function for Removing Duplicate Elements&lt;/h2&gt;
+&lt;p&gt;The 'distinct' function in Kotlin allows you to filter a collection, returning only unique elements. This is particularly useful when you need to ensure that your data set contains no duplicates, such as when displaying a list of user names or product IDs in an application. It operates by comparing the elements in the collection based on their equality, which can be customized through the use of a selector function.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 2, 3, 4, 4, 5)
+val distinctNumbers = numbers.distinct()
+println(distinctNumbers) // Output: [1, 2, 3, 4, 5]
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 23 Dec 2025 07:27:18 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251223072718.html</guid>
+      </item>
     <item>
       <title>Using the 'none' Function for Checking Non-Existence in Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251222072719.html</link>
