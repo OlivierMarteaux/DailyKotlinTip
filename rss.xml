@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Dec 2025 07:26:57 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 25 Dec 2025 07:25:31 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeWhile' Function for Conditional Element Selection</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251225072531.html</link>
+      <description>&lt;h2&gt;Using the 'takeWhile' Function for Conditional Element Selection&lt;/h2&gt;
+&lt;p&gt;The 'takeWhile' function allows you to retrieve elements from a collection as long as a specified condition is true. This can be particularly useful when you want to extract a subset of data based on certain criteria, stopping the extraction as soon as the condition fails. For example, if you have a list of numbers and you want to take all numbers until you encounter a negative number, 'takeWhile' is the perfect choice.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, -1, 4, 5)
+val positiveNumbers = numbers.takeWhile { it &gt;= 0 }
+println(positiveNumbers) // Output: [1, 2, 3]
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 25 Dec 2025 07:25:31 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251225072531.html</guid>
+      </item>
     <item>
       <title>Using the 'mapNotNull' Function for Transforming and Filtering Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251224072657.html</link>

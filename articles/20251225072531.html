@@ -1,0 +1,7 @@
+<h2>Using the 'takeWhile' Function for Conditional Element Selection</h2>
+<p>The 'takeWhile' function allows you to retrieve elements from a collection as long as a specified condition is true. This can be particularly useful when you want to extract a subset of data based on certain criteria, stopping the extraction as soon as the condition fails. For example, if you have a list of numbers and you want to take all numbers until you encounter a negative number, 'takeWhile' is the perfect choice.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, -1, 4, 5)
+val positiveNumbers = numbers.takeWhile { it >= 0 }
+println(positiveNumbers) // Output: [1, 2, 3]
+</pre>
