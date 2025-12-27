@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Dec 2025 07:25:09 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Dec 2025 07:22:15 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'reduce' Function for Accumulating Values</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251227072215.html</link>
+      <description>&lt;h2&gt;Using the 'reduce' Function for Accumulating Values&lt;/h2&gt;
+&lt;p&gt;The 'reduce' function is a powerful tool in Kotlin that allows you to accumulate values in a collection into a single result. It takes an operation as a parameter, which is applied to each element in the collection sequentially, combining them into a single output. This is particularly useful for operations like summing numbers, concatenating strings, or even building complex data structures from a list.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5)
+val sum = numbers.reduce { accumulator, value -&gt; accumulator + value }
+println("The sum of the numbers is: $sum") // Output: The sum of the numbers is: 15
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 27 Dec 2025 07:22:15 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251227072215.html</guid>
+      </item>
     <item>
       <title>Using the 'take' Function for Limiting Collection Size</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251226072509.html</link>

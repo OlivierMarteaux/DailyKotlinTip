@@ -1,0 +1,7 @@
+<h2>Using the 'reduce' Function for Accumulating Values</h2>
+<p>The 'reduce' function is a powerful tool in Kotlin that allows you to accumulate values in a collection into a single result. It takes an operation as a parameter, which is applied to each element in the collection sequentially, combining them into a single output. This is particularly useful for operations like summing numbers, concatenating strings, or even building complex data structures from a list.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 5)
+val sum = numbers.reduce { accumulator, value -> accumulator + value }
+println("The sum of the numbers is: $sum") // Output: The sum of the numbers is: 15
+</pre>
