@@ -1,0 +1,10 @@
+<h2>Using the 'groupBy' Function for Categorizing Collections</h2>
+<p>The 'groupBy' function is a powerful tool in Kotlin that allows you to group elements of a collection based on a specified criterion. This can be particularly useful when you want to categorize data into meaningful groups. For instance, you might want to group a list of items by their type or any other property. The result of 'groupBy' is a map where each key corresponds to a unique grouping criterion and the value is a list of items that fall under that key.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val items = listOf("Apple", "Banana", "Avocado", "Blueberry", "Cherry")
+
+val groupedByFirstLetter = items.groupBy { it.first() }
+
+println(groupedByFirstLetter)
+// Output: {A=[Apple, Avocado], B=[Banana, Blueberry], C=[Cherry]}
+</pre>

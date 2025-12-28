@@ -6,12 +6,28 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Dec 2025 07:22:15 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Dec 2025 07:23:52 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'groupBy' Function for Categorizing Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251228072352.html</link>
+      <description>&lt;h2&gt;Using the 'groupBy' Function for Categorizing Collections&lt;/h2&gt;
+&lt;p&gt;The 'groupBy' function is a powerful tool in Kotlin that allows you to group elements of a collection based on a specified criterion. This can be particularly useful when you want to categorize data into meaningful groups. For instance, you might want to group a list of items by their type or any other property. The result of 'groupBy' is a map where each key corresponds to a unique grouping criterion and the value is a list of items that fall under that key.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val items = listOf("Apple", "Banana", "Avocado", "Blueberry", "Cherry")
+
+val groupedByFirstLetter = items.groupBy { it.first() }
+
+println(groupedByFirstLetter)
+// Output: {A=[Apple, Avocado], B=[Banana, Blueberry], C=[Cherry]}
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 28 Dec 2025 07:23:52 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251228072352.html</guid>
+      </item>
     <item>
       <title>Using the 'reduce' Function for Accumulating Values</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251227072215.html</link>
