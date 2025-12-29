@@ -1,0 +1,14 @@
+<h2>Using the 'also' Function for Performing Additional Actions</h2>
+<p>The 'also' function in Kotlin is a useful scoping function that allows you to perform additional actions on an object within a block. It returns the original object after executing the actions, making it particularly handy for logging, debugging, or performing side effects without altering the original object.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val originalList = listOf(1, 2, 3, 4, 5)
+
+val modifiedList = originalList
+    .also { println("Original list: $it") } // Log the original list
+    .map { it * 2 } // Transform each element by multiplying by 2
+    .also { println("Modified list: $it") } // Log the modified list
+
+// Output:
+// Original list: [1, 2, 3, 4, 5]
+// Modified list: [2, 4, 6, 8, 10]
+</pre>

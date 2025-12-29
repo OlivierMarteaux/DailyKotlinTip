@@ -6,12 +6,32 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Dec 2025 07:23:52 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 29 Dec 2025 07:29:38 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'also' Function for Performing Additional Actions</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251229072938.html</link>
+      <description>&lt;h2&gt;Using the 'also' Function for Performing Additional Actions&lt;/h2&gt;
+&lt;p&gt;The 'also' function in Kotlin is a useful scoping function that allows you to perform additional actions on an object within a block. It returns the original object after executing the actions, making it particularly handy for logging, debugging, or performing side effects without altering the original object.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val originalList = listOf(1, 2, 3, 4, 5)
+
+val modifiedList = originalList
+    .also { println("Original list: $it") } // Log the original list
+    .map { it * 2 } // Transform each element by multiplying by 2
+    .also { println("Modified list: $it") } // Log the modified list
+
+// Output:
+// Original list: [1, 2, 3, 4, 5]
+// Modified list: [2, 4, 6, 8, 10]
+&lt;/pre&gt;</description>
+      <pubDate>Mon, 29 Dec 2025 07:29:38 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251229072938.html</guid>
+      </item>
     <item>
       <title>Using the 'groupBy' Function for Categorizing Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251228072352.html</link>
