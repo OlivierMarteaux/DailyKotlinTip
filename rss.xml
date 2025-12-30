@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Dec 2025 07:29:38 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Dec 2025 07:26:33 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeLast' Function for Retrieving Elements from the End of a Collection</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251230072633.html</link>
+      <description>&lt;h2&gt;Using the 'takeLast' Function for Retrieving Elements from the End of a Collection&lt;/h2&gt;
+&lt;p&gt;The 'takeLast' function is a powerful tool for retrieving a specified number of elements from the end of a collection. This can be particularly useful when you want to access the most recent items in a dataset, such as the latest entries in a log or the most recent messages in a chat application.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val messages = listOf("Hello", "How are you?", "I'm fine, thanks!", "What about you?", "See you soon!")
+val recentMessages = messages.takeLast(3)
+println(recentMessages) // Output: [I'm fine, thanks!, What about you?, See you soon!]
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 30 Dec 2025 07:26:33 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251230072633.html</guid>
+      </item>
     <item>
       <title>Using the 'also' Function for Performing Additional Actions</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251229072938.html</link>
