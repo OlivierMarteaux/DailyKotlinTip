@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Dec 2025 07:26:42 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Jan 2026 07:26:21 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'filterIsInstance' Function for Type-Safe Filtering</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260101072621.html</link>
+      <description>&lt;h2&gt;Using the 'filterIsInstance' Function for Type-Safe Filtering&lt;/h2&gt;
+&lt;p&gt;The 'filterIsInstance' function is a powerful tool for filtering collections based on their type. This function allows you to retrieve elements of a specific class type from a collection, ensuring type safety without the need for explicit casts. It’s particularly useful when dealing with collections that may contain multiple types, such as lists of objects or when working with polymorphism.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val mixedList: List&lt;Any&gt; = listOf("Hello", 42, 3.14, "World", 100)
+
+val strings: List&lt;String&gt; = mixedList.filterIsInstance&lt;String&gt;()
+
+println(strings) // Output: [Hello, World]
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 01 Jan 2026 07:26:21 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260101072621.html</guid>
+      </item>
     <item>
       <title>Using the 'run' Function for Contextual Execution</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20251231072642.html</link>

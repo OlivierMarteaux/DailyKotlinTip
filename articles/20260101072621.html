@@ -1,0 +1,9 @@
+<h2>Using the 'filterIsInstance' Function for Type-Safe Filtering</h2>
+<p>The 'filterIsInstance' function is a powerful tool for filtering collections based on their type. This function allows you to retrieve elements of a specific class type from a collection, ensuring type safety without the need for explicit casts. It’s particularly useful when dealing with collections that may contain multiple types, such as lists of objects or when working with polymorphism.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val mixedList: List<Any> = listOf("Hello", 42, 3.14, "World", 100)
+
+val strings: List<String> = mixedList.filterIsInstance<String>()
+
+println(strings) // Output: [Hello, World]
+</pre>
