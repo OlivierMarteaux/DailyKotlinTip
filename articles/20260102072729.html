@@ -1,0 +1,13 @@
+<h2>Using the 'combine' Function for Merging Flows</h2>
+<p>The 'combine' function in Kotlin Flow allows you to merge multiple flows into a single flow, emitting items whenever any of the source flows emit. This is particularly useful when you want to react to changes from multiple sources, such as combining user input with data from a repository in real-time.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+import kotlinx.coroutines.flow.*
+
+fun main() = runBlocking {
+    val flow1 = flowOf("A", "B", "C").onEach { delay(100) }
+    val flow2 = flowOf(1, 2, 3).onEach { delay(150) }
+
+    flow1.combine(flow2) { str, num -> "$str - $num" }
+        .collect { value -> println(value) }
+}
+</pre>
