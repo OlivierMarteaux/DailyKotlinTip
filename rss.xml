@@ -6,12 +6,32 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Jan 2026 07:22:39 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Jan 2026 07:25:02 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'associateBy' Function for Creating Maps from Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260104072502.html</link>
+      <description>&lt;h2&gt;Using the 'associateBy' Function for Creating Maps from Collections&lt;/h2&gt;
+&lt;p&gt;The 'associateBy' function in Kotlin allows you to convert a collection into a map by specifying a key selector function. This is particularly useful when you want to create a lookup table from a list of objects based on a specific property. By using 'associateBy', you can quickly access elements by their keys without needing to iterate through the collection multiple times.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val users = listOf(
+    User(1, "Alice"),
+    User(2, "Bob"),
+    User(3, "Charlie")
+)
+
+val userMap = users.associateBy { it.id }
+
+// Accessing a user by ID
+val userById = userMap[2] // Returns User(2, "Bob")
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 04 Jan 2026 07:25:02 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260104072502.html</guid>
+      </item>
     <item>
       <title>Using the 'with' Function for Object Configuration</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260103072239.html</link>
