@@ -1,0 +1,11 @@
+<h2>Using the 'let' Function for Nullable Handling</h2>
+<p>The 'let' function in Kotlin can also be effectively used for handling nullable types. It allows you to execute a block of code only if the value is non-null, thus avoiding null pointer exceptions. This is particularly useful when you want to perform operations on a nullable variable without explicitly checking for null.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val name: String? = "John Doe"
+
+name?.let { 
+    println("The name is $it") 
+} ?: run { 
+    println("Name is null") 
+}
+</pre>
