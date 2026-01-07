@@ -1,0 +1,13 @@
+<h2>Using the 'let' Function for Conditional Execution</h2>
+<p>The 'let' function can be used not only for nullable handling but also for executing a block of code conditionally based on a specific condition. This is particularly useful when you want to perform certain actions only if an object meets specific criteria. By combining 'let' with a null check or other conditions, you can write cleaner and more expressive code.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val user: User? = getUser()
+
+user?.let {
+    if (it.isActive) {
+        println("User is active: ${it.name}")
+    } else {
+        println("User is not active")
+    }
+}
+</pre>

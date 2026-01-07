@@ -6,12 +6,31 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Jan 2026 07:29:25 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 07 Jan 2026 07:28:47 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'let' Function for Conditional Execution</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260107072847.html</link>
+      <description>&lt;h2&gt;Using the 'let' Function for Conditional Execution&lt;/h2&gt;
+&lt;p&gt;The 'let' function can be used not only for nullable handling but also for executing a block of code conditionally based on a specific condition. This is particularly useful when you want to perform certain actions only if an object meets specific criteria. By combining 'let' with a null check or other conditions, you can write cleaner and more expressive code.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val user: User? = getUser()
+
+user?.let {
+    if (it.isActive) {
+        println("User is active: ${it.name}")
+    } else {
+        println("User is not active")
+    }
+}
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 07 Jan 2026 07:28:47 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260107072847.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function for Nullable Handling</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260106072925.html</link>
