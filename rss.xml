@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Jan 2026 07:28:47 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 07:28:22 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeUntil' Function for Conditional Element Selection</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260108072822.html</link>
+      <description>&lt;h2&gt;Using the 'takeUntil' Function for Conditional Element Selection&lt;/h2&gt;
+&lt;p&gt;The 'takeUntil' function allows you to take elements from a collection until a specified condition is met. This can be particularly useful when you want to collect items based on a certain predicate and stop once that condition is satisfied. It enhances readability and reduces the need for manual iteration.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val takenUntilFive = numbers.takeUntil { it == 5 }
+// takenUntilFive will contain [1, 2, 3, 4]
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 08 Jan 2026 07:28:22 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260108072822.html</guid>
+      </item>
     <item>
       <title>Using the 'let' Function for Conditional Execution</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260107072847.html</link>
