@@ -1,0 +1,9 @@
+<h2>Using the 'takeWhile' Function for Conditional Collection Selection</h2>
+<p>
+The 'takeWhile' function in Kotlin allows you to select elements from a collection as long as a specified condition is true. This is particularly useful when you want to extract a prefix of elements that satisfy a certain criterion. Once an element fails the condition, the selection stops, making it an efficient way to filter collections based on dynamic criteria.
+</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val takenNumbers = numbers.takeWhile { it < 5 }
+// takenNumbers will be [1, 2, 3, 4]
+</pre>

@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jan 2026 07:28:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jan 2026 07:30:41 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeWhile' Function for Conditional Collection Selection</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260109073041.html</link>
+      <description>&lt;h2&gt;Using the 'takeWhile' Function for Conditional Collection Selection&lt;/h2&gt;
+&lt;p&gt;
+The 'takeWhile' function in Kotlin allows you to select elements from a collection as long as a specified condition is true. This is particularly useful when you want to extract a prefix of elements that satisfy a certain criterion. Once an element fails the condition, the selection stops, making it an efficient way to filter collections based on dynamic criteria.
+&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val takenNumbers = numbers.takeWhile { it &lt; 5 }
+// takenNumbers will be [1, 2, 3, 4]
+&lt;/pre&gt;</description>
+      <pubDate>Fri, 09 Jan 2026 07:30:41 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260109073041.html</guid>
+      </item>
     <item>
       <title>Using the 'takeUntil' Function for Conditional Element Selection</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260108072822.html</link>
