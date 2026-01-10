@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jan 2026 07:30:41 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2026 07:22:29 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'partition' Function for Splitting Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260110072229.html</link>
+      <description>&lt;h2&gt;Using the 'partition' Function for Splitting Collections&lt;/h2&gt;
+&lt;p&gt;The 'partition' function is a powerful tool in Kotlin that allows you to split a collection into two lists based on a given predicate. This can be particularly useful when you want to categorize data into two distinct groups, such as filtering out valid and invalid entries from a list. Instead of using multiple iterations or filters, 'partition' elegantly handles the task in a single pass, improving both readability and performance.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val (evenNumbers, oddNumbers) = numbers.partition { it % 2 == 0 }
+
+println("Even Numbers: $evenNumbers") // Output: Even Numbers: [2, 4, 6, 8, 10]
+println("Odd Numbers: $oddNumbers")   // Output: Odd Numbers: [1, 3, 5, 7, 9]
+&lt;/pre&gt;</description>
+      <pubDate>Sat, 10 Jan 2026 07:22:29 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260110072229.html</guid>
+      </item>
     <item>
       <title>Using the 'takeWhile' Function for Conditional Collection Selection</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260109073041.html</link>
