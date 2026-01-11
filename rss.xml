@@ -6,12 +6,28 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jan 2026 07:22:29 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 11 Jan 2026 07:24:39 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'zip' Function for Pairing Collections</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260111072439.html</link>
+      <description>&lt;h2&gt;Using the 'zip' Function for Pairing Collections&lt;/h2&gt;
+&lt;p&gt;The 'zip' function in Kotlin allows you to combine two collections into a single collection of pairs. This is especially useful when you need to process two related lists together, such as combining a list of names with a corresponding list of ages. The resulting collection will contain pairs of elements from both lists, maintaining their respective positions.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val names = listOf("Alice", "Bob", "Charlie")
+val ages = listOf(25, 30, 35)
+
+val paired = names.zip(ages)
+
+println(paired) // Output: [(Alice, 25), (Bob, 30), (Charlie, 35)]
+&lt;/pre&gt;</description>
+      <pubDate>Sun, 11 Jan 2026 07:24:39 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260111072439.html</guid>
+      </item>
     <item>
       <title>Using the 'partition' Function for Splitting Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260110072229.html</link>
