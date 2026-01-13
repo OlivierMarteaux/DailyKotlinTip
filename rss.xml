@@ -6,12 +6,30 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Jan 2026 07:31:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Jan 2026 07:28:25 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'flatMap' Function for Transforming Collections with Nested Structures</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260113072825.html</link>
+      <description>&lt;h2&gt;Using the 'flatMap' Function for Transforming Collections with Nested Structures&lt;/h2&gt;
+&lt;p&gt;The 'flatMap' function is a powerful tool in Kotlin that allows you to transform nested collections into a single collection by applying a transformation function to each element and flattening the result. This is particularly useful when dealing with collections of collections, such as lists of lists. Instead of handling nested loops, 'flatMap' simplifies the process by applying a function to each element and merging the results into one collection.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val nestedList = listOf(
+    listOf(1, 2, 3),
+    listOf(4, 5),
+    listOf(6, 7, 8, 9)
+)
+
+val flattenedList = nestedList.flatMap { it } // Transforms nested lists into a single list
+println(flattenedList) // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+&lt;/pre&gt;</description>
+      <pubDate>Tue, 13 Jan 2026 07:28:25 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260113072825.html</guid>
+      </item>
     <item>
       <title>Using the 'flatMap' Function for Transforming Nested Collections</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260112073115.html</link>
