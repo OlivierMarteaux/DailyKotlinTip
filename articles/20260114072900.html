@@ -1,0 +1,7 @@
+<h2>Using the 'distinctBy' Function for Unique Collection Elements</h2>
+<p>The 'distinctBy' function in Kotlin allows you to filter a collection to contain only unique elements based on a specified selector. This is particularly useful when you want to remove duplicates from a list while keeping the first occurrence of each unique element. It can make your code cleaner and more efficient by avoiding manual iterations and checks for uniqueness.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val items = listOf("apple", "banana", "apple", "orange", "banana", "kiwi")
+val distinctItems = items.distinctBy { it }
+println(distinctItems) // Output: [apple, banana, orange, kiwi]
+</pre>

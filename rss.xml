@@ -6,12 +6,25 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Jan 2026 07:28:25 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jan 2026 07:29:00 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'distinctBy' Function for Unique Collection Elements</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260114072900.html</link>
+      <description>&lt;h2&gt;Using the 'distinctBy' Function for Unique Collection Elements&lt;/h2&gt;
+&lt;p&gt;The 'distinctBy' function in Kotlin allows you to filter a collection to contain only unique elements based on a specified selector. This is particularly useful when you want to remove duplicates from a list while keeping the first occurrence of each unique element. It can make your code cleaner and more efficient by avoiding manual iterations and checks for uniqueness.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+val items = listOf("apple", "banana", "apple", "orange", "banana", "kiwi")
+val distinctItems = items.distinctBy { it }
+println(distinctItems) // Output: [apple, banana, orange, kiwi]
+&lt;/pre&gt;</description>
+      <pubDate>Wed, 14 Jan 2026 07:29:00 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260114072900.html</guid>
+      </item>
     <item>
       <title>Using the 'flatMap' Function for Transforming Collections with Nested Structures</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260113072825.html</link>
