@@ -6,12 +6,27 @@
     <description>Auto‑generated Kotlin advice</description>
     <ns0:link href="https://oliviermarteaux.github.io/DailyKotlinTip/" rel="self" />
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jan 2026 07:29:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jan 2026 07:28:59 GMT</lastBuildDate>
     <image>
       <url>https://oliviermarteaux.github.io/DailyKotlinTip/icon.png</url>
       <title>Daily Kotlin Tip</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/</link>
       </image>
+    <item>
+      <title>Using the 'takeWhile' Function for Conditional Collection Selection</title>
+      <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260115072859.html</link>
+      <description>&lt;h2&gt;Using the 'takeWhile' Function for Conditional Collection Selection&lt;/h2&gt;
+&lt;p&gt;The 'takeWhile' function is a powerful tool in Kotlin that allows you to retrieve elements from a collection as long as they satisfy a given condition. This is particularly useful when you want to extract a segment of a collection that meets specific criteria, effectively creating a sub-list without having to write additional loops or conditional statements.&lt;/p&gt;
+&lt;pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;"&gt;
+&lt;code&gt;
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val evenNumbers = numbers.takeWhile { it % 2 == 0 }
+println(evenNumbers) // Output: []
+&lt;/code&gt;
+&lt;/pre&gt;</description>
+      <pubDate>Thu, 15 Jan 2026 07:28:59 GMT</pubDate>
+      <guid>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260115072859.html</guid>
+      </item>
     <item>
       <title>Using the 'distinctBy' Function for Unique Collection Elements</title>
       <link>https://oliviermarteaux.github.io/DailyKotlinTip/articles/20260114072900.html</link>
