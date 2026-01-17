@@ -1,0 +1,7 @@
+<h2>Using the 'mapNotNull' Function for Filtering and Transforming Collections</h2>
+<p>The 'mapNotNull' function is a powerful tool in Kotlin that allows you to transform collections while simultaneously filtering out null values. This is particularly useful when you're working with collections that may contain nullable elements and you want to apply a transformation while ignoring any nulls in the process.</p>
+<pre style="background-color: #8a428a; color: white; padding: 12px; font-size: 10px; overflow-x: auto;">
+val numbers: List<Int?> = listOf(1, 2, null, 4, null, 6)
+val doubledNonNullNumbers: List<Int> = numbers.mapNotNull { it?.let { it * 2 } }
+// Result: [2, 4, 8, 12]
+</pre>
